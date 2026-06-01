@@ -28,10 +28,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install deps
-        run: pip install -r ContentManagement/requirements.txt 2>/dev/null; echo "deps ok"
+      # auto_pipeline.py 只用 Python 标准库，无需 pip install
 
       - name: Generate daily content
         env:
