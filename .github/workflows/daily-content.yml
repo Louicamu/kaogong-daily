@@ -2,8 +2,8 @@ name: 🤖 考公每日学 · 自动生成
 
 on:
   schedule:
-    # 每天北京时间 6:00 (UTC 22:00)
-    - cron: '0 22 * * *'
+    # 每天北京时间 7:00 (UTC 23:00) — 人民日报/新华社均已更新
+    - cron: '0 23 * * *'
   # 手动触发
   workflow_dispatch:
     inputs:
