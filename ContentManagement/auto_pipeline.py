@@ -188,66 +188,33 @@ def build_unified_prompt(articles: List[dict]) -> str:
 
 
 # ============================================================
-# 文章来源 (免费 RSS / 网页抓取)
+# 文章来源 (四大官媒爬虫 + 种子降级)
 # ============================================================
 
-ARTICLE_SOURCES = [
-    {
-        "name": "人民日报评论",
-        "url": "http://opinion.people.com.cn/GB/8213/49160/49219/index.html",
-        "selector": "div.hdNews a",  # CSS selector (备用)
-    },
-]
-
-
 def fetch_articles() -> List[dict]:
-    """抓取当日文章 (降级: 用硬编码的种子文章保证管线不断)"""
-    import urllib.request
-
-    articles = []
-
-    # 尝试从人民日报抓取
+    """抓取当日文章, 爬虫失败时降级为种子文章"""
     try:
-        req = urllib.request.Request(
-            "http://opinion.people.com.cn/GB/8213/49160/49219/index.html",
-            headers={"User-Agent": "Mozilla/5.0"},
-        )
-        html = urllib.request.urlopen(req, timeout=10).read().decode("gbk", errors="ignore")
-        # 简单链接提取
-        links = re.findall(r'<a[^>]+href="([^"]+)"[^>]*>([^<]{15,})</a>', html)
-        for url, title in links[:3]:
-            if "people.com.cn" in url:
-                try:
-                    req2 = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                    content = urllib.request.urlopen(req2, timeout=10).read().decode("gbk", errors="ignore")
-                    text = re.sub(r'<[^>]+>', '', content)
-                    text = re.sub(r'\s+', ' ', text)
-                    # 取正文 (通常在 div.article 或正文段落中)
-                    body_match = re.search(r'(?:<p>|　　)(.{50,})', content)
-                    body = body_match.group(1) if body_match else text[:2000]
-                    body = re.sub(r'<[^>]+>', '', body)[:2000]
-                    articles.append({"title": title, "content": body, "source": "人民日报", "url": url})
-                except:
-                    pass
+        from crawler import fetch_all
+        articles = fetch_all()
+        if articles:
+            return articles
     except Exception as e:
-        print(f"  [抓取] 人民日报失败: {e}")
+        print(f"  [爬虫] 模块加载失败: {e}")
 
-    # 降级: 种子文章 (保证每天有内容输出)
-    if not articles:
-        articles.append({
-            "title": "在进一步全面深化改革中推进中国式现代化",
-            "content": """
-            党的二十届三中全会对进一步全面深化改革、推进中国式现代化作出战略部署。
-            中国式现代化是全体人民共同富裕的现代化，是物质文明和精神文明相协调的现代化。
-            发展新质生产力是推动高质量发展的内在要求和重要着力点。
-            改革要以促进社会公平正义、增进人民福祉为出发点和落脚点。
-            2025年我国GDP突破130万亿元，经济实力实现历史性跃升。
-            """,
-            "source": "人民日报",
-            "url": "",
-        })
-
-    return articles
+    # 最终降级: 种子文章 (保证管线不断)
+    print("  [降级] 使用种子文章")
+    return [{
+        "title": "在进一步全面深化改革中推进中国式现代化",
+        "content": """
+        党的二十届三中全会对进一步全面深化改革、推进中国式现代化作出战略部署。
+        中国式现代化是全体人民共同富裕的现代化，是物质文明和精神文明相协调的现代化。
+        发展新质生产力是推动高质量发展的内在要求和重要着力点。
+        改革要以促进社会公平正义、增进人民福祉为出发点和落脚点。
+        2025年我国GDP突破130万亿元，经济实力实现历史性跃升。
+        """,
+        "source": "人民日报",
+        "url": "",
+    }]
 
 
 # ============================================================
