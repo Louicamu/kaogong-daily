@@ -69,19 +69,25 @@ class LLM:
 # ============================================================
 
 def political_prompt(article_text: str) -> str:
-    return f"""你是国考政治理论命题专家。从以下文章提取 3 条政治理论单句记忆卡片。
+    return f"""你是国考政治理论命题专家。从以下文章提取 2 条政治理论选择题。
 
 规则:
-1. 每条单句严格模仿国考"常识判断"真题的正确选项表述风格
-2. 一句完整、规范、无语病的政治陈述, 不超过50字
-3. 必须来源于原文
-4. 优先提取: 重要会议名称、政策术语、规范性表述、领导人讲话金句
+1. 每条题包含1个正确陈述(correctStatement)+ 3个干扰选项(wrongOptions)
+2. 正确陈述严格模仿国考"常识判断"正确选项表述, 来源于原文, 不超过50字
+3. 干扰项必须看似合理但实际有误——如: 偷换概念、张冠李戴、用词绝对化
+4. 必须确保正确陈述和干扰项在句式上风格一致
 
 文章:
 {article_text[:2500]}
 
 返回纯JSON (不要markdown):
-{{"cards":[{{"statement":"...","tags":["标签"]}}]}}"""
+{{"cards":[
+  {{
+    "correctStatement": "原文中的正确陈述",
+    "wrongOptions": ["错误但看似合理的选项1", "错误选项2", "错误选项3"],
+    "tags": ["考点标签"]
+  }}
+]}}"""
 
 
 def essay_prompt(article_text: str, existing_words: List[str]) -> str:
@@ -245,17 +251,17 @@ def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> di
             {
                 "questionId": f"pt_{target_date}_{i:02d}",
                 "questionType": "correct",
-                "question": f"以下说法正确的是：",
+                "question": "以下说法正确的是：",
                 "options": {
-                    "A": c["statement"],
-                    "B": c["statement"].replace("中国式现代化", "全面深化改革") if "中国式现代化" in c["statement"] else "替换项B",
-                    "C": "替换项C",
-                    "D": "替换项D",
+                    "A": c.get("correctStatement", c.get("statement", "")),
+                    "B": c.get("wrongOptions", ["混淆概念的错误表述", "绝对化不当的表述", "与原文相悖的表述"])[0],
+                    "C": c.get("wrongOptions", ["", "", ""])[1] if len(c.get("wrongOptions", [])) > 1 else "与原文无关的表述",
+                    "D": c.get("wrongOptions", ["", "", ""])[2] if len(c.get("wrongOptions", [])) > 2 else "逻辑错误的表述",
                 },
                 "correctAnswer": "A",
-                "analysis": f"该陈述准确反映了原文精神。",
+                "analysis": f"选项A的陈述准确反映了原文精神。",
                 "tags": c.get("tags", []),
-                "source": c["source"],
+                "source": c.get("source", main_art["source"]),
                 "date": target_date,
             }
             for i, c in enumerate(all_cards)
