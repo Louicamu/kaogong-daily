@@ -39,7 +39,7 @@ class LLM:
             raise RuntimeError("DEEPSEEK_API_KEY 未设置")
 
         body = json.dumps({
-            "model": "deepseek-chat",
+            "model": "deepseek-v4-flash",
             "messages": [{"role": "user", "content": prompt}],
             "temperature": temperature,
             "max_tokens": max_tokens,
