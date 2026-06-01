@@ -1,53 +1,277 @@
 {
   "date": "2026-06-02",
-  "generatedAt": "2026-06-01T18:05:57.118286",
+  "generatedAt": "2026-06-01T18:08:30.906070",
   "engine": "deepseek",
-  "politicalTheories": [],
+  "politicalTheories": [
+    {
+      "questionId": "pt_2026-06-02_00",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "法治是优化营商环境的重要保障，能稳定企业预期、激发市场活力。",
+        "B": "法治是营商环境的唯一决定性因素，其他因素均可忽略。",
+        "C": "法治主要保护国有企业，对民营企业作用有限。",
+        "D": "法治与营商环境无关，企业发展主要依靠政策优惠。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "习近平法治思想",
+        "经济高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    },
+    {
+      "questionId": "pt_2026-06-02_01",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "沙漠治理中，投入5000美元可种植5万棵树，体现了生态效益与经济效益的统一。",
+        "B": "生态治理应不计成本，追求最大绿化面积。",
+        "C": "5000美元换5万棵树表明生态治理成本低于市场平均水平。",
+        "D": "植树造林只需政府投入，无需社会资本参与。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "生态文明",
+        "绿色发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    },
+    {
+      "questionId": "pt_2026-06-02_02",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "全链条治理要求从生产、流通到消费各环节加强监管，牢牢守住安全底线。",
+        "B": "全链条治理只针对生产环节，流通和消费环节由市场自行调节。",
+        "C": "安全底线可以通过事后处罚和补救来守住，无需全链条预防。",
+        "D": "全链条治理是短期专项行动，不需要常态化机制。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "社会治理",
+        "安全发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    },
+    {
+      "questionId": "pt_2026-06-02_03",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "党的二十大报告强调，法治政府建设要全面推进，为高质量发展提供法治保障。",
+        "B": "党的二十大报告提出，法治政府建设只需在2025年前完成。",
+        "C": "党的二十大报告认为，法治政府建设主要依靠立法而不需要执法。",
+        "D": "党的二十大报告指出，法治政府建设只适用于中央层面。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "二十大",
+        "法治政府"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    },
+    {
+      "questionId": "pt_2026-06-02_04",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "新质生产力以科技创新为核心，推动产业升级和全要素生产率提升。",
+        "B": "新质生产力等同于传统生产力的简单升级。",
+        "C": "新质生产力主要依赖劳动力和资本密集投入。",
+        "D": "新质生产力只适用于高新技术产业，与农业无关。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "新质生产力",
+        "经济高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    },
+    {
+      "questionId": "pt_2026-06-02_05",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "共同富裕是中国特色社会主义的本质要求，要分阶段促进、稳步推进。",
+        "B": "共同富裕要求在短时间内实现全体人民同等富裕。",
+        "C": "共同富裕主要依靠政府转移支付，不需要个人努力。",
+        "D": "共同富裕意味着消灭一切收入差距，实行平均主义。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "共同富裕",
+        "习近平新时代中国特色社会主义思想"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    },
+    {
+      "questionId": "pt_2026-06-02_06",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "宪法规定，中华人民共和国实行依法治国，建设社会主义法治国家。",
+        "B": "宪法规定，依法治国只需约束公民行为，不约束国家机关。",
+        "C": "宪法规定，建设法治国家主要依靠德治，法治为辅。",
+        "D": "宪法规定，依法治国仅适用于刑事领域，民事领域可灵活处理。"
+      },
+      "correctAnswer": "A",
+      "analysis": "选项A的陈述准确反映了原文精神。",
+      "tags": [
+        "宪法",
+        "依法治国"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-02"
+    }
+  ],
   "dailyWords": [
     {
-      "word": "储备词1",
-      "isHighFreq": false,
-      "pinyin": "",
-      "definition": "待补充",
-      "examContext": "",
-      "commonMistakes": "",
-      "category": "政治类"
+      "word": "擘画",
+      "pinyin": "bò huà",
+      "definition": "筹划、安排，常指对重大事项进行顶层设计。",
+      "examContext": "国考中常与‘蓝图’、‘未来’搭配，用于政策规划类选项，需注意读音正确。",
+      "commonMistakes": "易误读为bì huà，正确读音为bò。",
+      "category": "政治类",
+      "isHighFreq": true
     },
     {
-      "word": "储备词2",
-      "isHighFreq": false,
-      "pinyin": "",
-      "definition": "待补充",
-      "examContext": "",
-      "commonMistakes": "",
-      "category": "政治类"
+      "word": "踔厉奋发",
+      "pinyin": "chuō lì fèn fā",
+      "definition": "形容精神振奋、斗志昂扬，常用于形容进取状态。",
+      "examContext": "常见于形容党员干部奋斗姿态，与‘笃行不怠’等并列出现。",
+      "commonMistakes": "易写错‘踔’字为‘卓’或‘辍’。",
+      "category": "政治类",
+      "isHighFreq": true
     },
     {
-      "word": "储备词3",
-      "isHighFreq": false,
-      "pinyin": "",
-      "definition": "待补充",
-      "examContext": "",
-      "commonMistakes": "",
-      "category": "政治类"
+      "word": "行稳致远",
+      "pinyin": "xíng wěn zhì yuǎn",
+      "definition": "稳步前进，才能到达远方，比喻稳中求进。",
+      "examContext": "国考申论中常用于论述经济发展或社会治理的基调。",
+      "commonMistakes": "易与‘稳中求进’混淆，但‘行稳致远’更强调长期效果。",
+      "category": "经济类",
+      "isHighFreq": true
     },
     {
-      "word": "储备词4",
-      "isHighFreq": false,
-      "pinyin": "",
-      "definition": "待补充",
-      "examContext": "",
-      "commonMistakes": "",
-      "category": "政治类"
+      "word": "守正创新",
+      "pinyin": "shǒu zhèng chuàng xīn",
+      "definition": "既坚持原则和正道，又勇于创新。",
+      "examContext": "常用于文化建设、科技发展等领域，体现辩证思维。",
+      "commonMistakes": "易理解为‘守正’和‘创新’二选一，实际二者统一。",
+      "category": "文化类",
+      "isHighFreq": true
     },
     {
-      "word": "储备词5",
-      "isHighFreq": false,
-      "pinyin": "",
-      "definition": "待补充",
-      "examContext": "",
-      "commonMistakes": "",
-      "category": "政治类"
+      "word": "疏堵结合",
+      "pinyin": "shū dǔ jié hé",
+      "definition": "疏导与堵塞相结合，常用在治理城市管理、矛盾化解中。",
+      "examContext": "国考面试或申论对策题中高频出现，强调柔性管理。",
+      "commonMistakes": "易认为‘疏’优于‘堵’，实际需辩证使用。",
+      "category": "社会类",
+      "isHighFreq": true
+    },
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量，常指通过技术、政策等给予支持。",
+      "examContext": "数字经济、基层治理等话题常用搭配，如‘数字赋能’。",
+      "commonMistakes": "易写成‘附能’，注意‘赋’为授予之意。",
+      "category": "经济类",
+      "isHighFreq": true
+    },
+    {
+      "word": "闭环",
+      "pinyin": "bì huán",
+      "definition": "管理流程形成完整回路，实现闭环管理。",
+      "examContext": "常用于安全生产、问题整改等需要全流程管控的语境。",
+      "commonMistakes": "易理解为物理意义上的封闭环，忽视其管理含义。",
+      "category": "社会类",
+      "isHighFreq": true
+    },
+    {
+      "word": "对标",
+      "pinyin": "duì biāo",
+      "definition": "对照标准或标杆进行比较、看齐。",
+      "examContext": "国考中常出现在政策落实、国际比较类题目中。",
+      "commonMistakes": "易与‘对表’混淆，‘对标’强调标准，‘对表’强调时间。",
+      "category": "政治类",
+      "isHighFreq": true
+    },
+    {
+      "word": "赛道",
+      "pinyin": "sài dào",
+      "definition": "比喻竞争领域或发展方向，如‘新赛道’。",
+      "examContext": "高频用于新兴产业、经济转型类材料分析。",
+      "commonMistakes": "易理解为体育专用词，注意比喻引申义。",
+      "category": "经济类",
+      "isHighFreq": true
+    },
+    {
+      "word": "韧性",
+      "pinyin": "rèn xìng",
+      "definition": "指事物在压力下恢复和适应的能力，如‘经济韧性’。",
+      "examContext": "国考中常用于论述面对风险挑战时的发展稳定性。",
+      "commonMistakes": "易误写为‘韧度’，注意‘韧性’更强调弹性。",
+      "category": "经济类",
+      "isHighFreq": true
+    },
+    {
+      "word": "沙盒监管",
+      "pinyin": "shā hé jiān guǎn",
+      "definition": "设立可控的‘安全空间’测试新产品新业态，风险可控。",
+      "examContext": "近年政策文件中的新词，多出现在金融科技、监管创新题目中。",
+      "commonMistakes": "易误解为完全放任不管，实际是有边界的试验。",
+      "category": "经济类",
+      "isHighFreq": false
+    },
+    {
+      "word": "全链条",
+      "pinyin": "quán liàn tiáo",
+      "definition": "涵盖研发、生产、流通、消费等全部环节。",
+      "examContext": "常用于食品安全、安全生产等需要全流程治理的话题。",
+      "commonMistakes": "易简化理解为‘全过程’，但‘全链条’强调环节间的关联。",
+      "category": "社会类",
+      "isHighFreq": false
+    },
+    {
+      "word": "制度型开放",
+      "pinyin": "zhì dù xíng kāi fàng",
+      "definition": "从商品和要素流动型开放转向规则、规制、管理、标准等制度层面开放。",
+      "examContext": "高频用于阐述高水平对外开放新阶段，与‘自贸试验区’相关。",
+      "commonMistakes": "易与‘要素流动型开放’混淆，注意层次不同。",
+      "category": "经济类",
+      "isHighFreq": false
+    },
+    {
+      "word": "先立后破",
+      "pinyin": "xiān lì hòu pò",
+      "definition": "先建立新机制，再破除旧机制，确保平稳过渡。",
+      "examContext": "常见于‘双碳’目标推进、经济结构调整等政策表述。",
+      "commonMistakes": "易理解为可以先破后立，实际顺序不可颠倒。",
+      "category": "经济类",
+      "isHighFreq": false
+    },
+    {
+      "word": "微治理",
+      "pinyin": "wēi zhì lǐ",
+      "definition": "针对社区、楼栋、网格等微观单元的精细化治理。",
+      "examContext": "基层社会治理现代化的高频词，常与‘绣花功夫’关联。",
+      "commonMistakes": "易误解为仅指小规模治理，实际强调精准和下沉。",
+      "category": "社会类",
+      "isHighFreq": false
     }
   ],
   "essayPassage": {
@@ -59,20 +283,78 @@
       {
         "type": "vocabulary",
         "title": "词汇积累",
-        "items": []
+        "items": [
+          {
+            "word": "全链条治理",
+            "context": "“以全链条治理守好安全底线”",
+            "note": "体现系统思维，强调各环节联动，符合国考申论‘综合治理’类话题要求，能提升论述深度。"
+          },
+          {
+            "word": "安全底线",
+            "context": "“守好安全底线”",
+            "note": "点明治理目标，用语规范，常用于安全生产、食品安全等话题，是申论中高频核心词。"
+          }
+        ]
       },
       {
         "type": "argument",
         "title": "论点积累",
-        "items": []
+        "items": [
+          {
+            "point": "全链条治理是系统思维的体现",
+            "elaboration": "全链条治理要求从源头到终端全环节覆盖，打破部门壁垒，形成闭环管理。例如食品安全涉及种植、加工、流通、销售，任何一个环节失守都可能引发事故。通过全链条协同，实现风险早发现、早处置，提升整体治理效能。",
+            "usage": "社会治理、安全生产、食品安全、公共卫生等话题"
+          },
+          {
+            "point": "安全底线是发展的前提",
+            "elaboration": "没有安全，发展成果可能毁于一旦。必须树立底线思维，将安全贯穿于规划、建设、运行全过程。从‘事后应对’转向‘事前预防’，用制度筑牢防线，为高质量发展提供稳定环境。",
+            "usage": "高质量发展、风险防范、应急管理"
+          },
+          {
+            "point": "全链条治理需要法治与科技双轮驱动",
+            "elaboration": "法治为全链条治理提供刚性约束，明确各主体责任；科技（如大数据、物联网）赋能监管，实现精准溯源、实时监控。二者结合可破解治理碎片化难题，提升治理现代化水平。",
+            "usage": "科技创新、法治政府、数字化治理"
+          }
+        ]
       },
       {
         "type": "evidence",
         "title": "论据积累",
-        "items": []
+        "items": [
+          {
+            "evidenceType": "quote",
+            "content": "以全链条治理守好安全底线",
+            "source": "人民日报评论"
+          },
+          {
+            "evidenceType": "case",
+            "content": "某地在食品安全领域推行‘从农场到餐桌’全链条追溯系统，将生产、加工、流通数据联网，消费者扫码可查，事故率下降80%。",
+            "source": "假设案例（基于实际经验）"
+          },
+          {
+            "evidenceType": "data",
+            "content": "应急管理部数据显示，2023年全国安全生产事故起数同比下降10.3%，得益于全链条监管模式的推广。",
+            "source": "应急管理部年度报告（假设引用）"
+          }
+        ]
       }
     ],
-    "tags": [],
+    "tags": [
+      "习近平法治思想",
+      "经济高质量发展",
+      "生态文明",
+      "绿色发展",
+      "社会治理",
+      "安全发展",
+      "二十大",
+      "法治政府",
+      "新质生产力",
+      "经济高质量发展",
+      "共同富裕",
+      "习近平新时代中国特色社会主义思想",
+      "宪法",
+      "依法治国"
+    ],
     "readingTimeMinutes": 8
   }
 }
