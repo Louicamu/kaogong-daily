@@ -1,10 +1,10 @@
 <template>
   <view class="word-grid">
     <view class="grid-header">
-      <text class="stats-text">今日词汇 <text class="hl">7</text> 词 · 已翻转 <text class="hl">{{ flippedCount }}</text> · 已掌握 <text class="hl">{{ masteredCount }}</text></text>
+      <text class="stats-text">今日词汇 <text class="hl">15</text> 词 · 已翻转 <text class="hl">{{ flippedCount }}</text> · 已掌握 <text class="hl">{{ masteredCount }}</text></text>
       <view class="ratio-badges">
-        <text class="badge badge-high">高频 4</text>
-        <text class="badge badge-pred">预测 3</text>
+        <text class="badge badge-high">高频 10</text>
+        <text class="badge badge-pred">预测 5</text>
       </view>
     </view>
     <!-- 高频区 -->
@@ -13,7 +13,7 @@
         <text class="title-high">高频常考词汇</text>
         <view class="stripe-high" />
       </view>
-      <view class="grid-2x2">
+      <view class="grid-5x2">
         <word-card v-for="w in highWords" :key="w.wordId" v-bind="w" :isHighFreq="true" @flip="onFlip" @master="onMaster(w.wordId, $event)" />
       </view>
     </view>
@@ -29,12 +29,12 @@
         <text class="title-pred">预测新词积累</text>
         <view class="stripe-pred" />
       </view>
-      <view class="grid-3col">
+      <view class="grid-5col">
         <word-card v-for="w in predWords" :key="w.wordId" v-bind="w" :isHighFreq="false" @flip="onFlip" @master="onMaster(w.wordId, $event)" />
       </view>
     </view>
     <view v-if="masteredCount >= 4" class="encouragement">
-      <text>{{ masteredCount >= 7 ? '今日词汇已全部掌握 ✨' : '已掌握过半，继续加油！' }}</text>
+      <text>{{ masteredCount >= 7 ? '今日词汇已掌握过半 ✨' : '已掌握过半，继续加油！' }}</text>
     </view>
   </view>
 </template>
@@ -76,8 +76,8 @@ function onMaster(wordId, e) {
 .stripe-high { flex: 1; height: 2rpx; background: var(--accent-vermillion-muted); opacity: 0.5; }
 .stripe-pred { flex: 1; height: 1rpx; background: var(--divider); }
 
-.grid-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16rpx; }
-.grid-3col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16rpx; }
+.grid-5x2 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 16rpx; }
+.grid-5col { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 16rpx; }
 
 .section-divider { display: flex; align-items: center; gap: 16rpx; margin: 32rpx 0; }
 .divider-text { font-family: var(--font-title); font-size: 24rpx; color: var(--text-placeholder); white-space: nowrap; }

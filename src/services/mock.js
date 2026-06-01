@@ -28,9 +28,9 @@ function getDailyContent(date) {
         },
         wordSet: {
           available: true,
-          totalWords: 7,
-          highFreqCount: 4,
-          predictiveCount: 3,
+          totalWords: 15,
+          highFreqCount: 10,
+          predictiveCount: 5,
           previewWords: [
             { word: '擘画', isHighFreq: true },
             { word: '踔厉奋发', isHighFreq: true },
@@ -110,14 +110,14 @@ function getPoliticalQuestions(date) {
 }
 
 /**
- * 每日词汇组 (7词, 4:3比例)
+ * 每日词汇组 (7词, 10:5比例)
  */
 function getDailyWordSet(date) {
   return {
     code: 0,
     data: {
       date: date || TODAY_STR,
-      totalWords: 7,
+      totalWords: 15,
       words: [
         {
           wordId: 'wb_001', word: '擘画', wordType: 'idiom',

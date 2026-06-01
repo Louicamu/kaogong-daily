@@ -65,45 +65,65 @@ class LLM:
 
 
 # ============================================================
-# 提示词
+# 统一提示词 — 一次调用产出全部模块
 # ============================================================
 
-def political_prompt(article_text: str) -> str:
-    return f"""你是国考政治理论命题专家。从以下文章提取 2 条政治理论选择题。
+UNIFIED_PROMPT = """你是国考备考内容专家。从以下当日新闻文章中，一次性生成三个模块的学习内容。
 
+===== 文章 =====
+{articles}
+
+===== 模块一：政治理论选择题 (2-3题) =====
 规则:
-1. 每条题包含1个正确陈述(correctStatement)+ 3个干扰选项(wrongOptions)
-2. 正确陈述严格模仿国考"常识判断"正确选项表述, 来源于原文, 不超过50字
-3. 干扰项必须看似合理但实际有误——如: 偷换概念、张冠李戴、用词绝对化
-4. 必须确保正确陈述和干扰项在句式上风格一致
+1. 每条题1个正确陈述(correctStatement)+3个干扰选项(wrongOptions)，选项句式风格一致
+2. 正确陈述模仿国考"常识判断"正确选项表述，来源于原文，≤50字
+3. 干扰项偷换概念/张冠李戴/绝对化，看似合理实则错误
 
-文章:
-{article_text[:2500]}
+===== 模块二：选词填空 (15词，严格10:5比例) =====
+规则:
+1. 从文章中提取15个词语，分为两个等级:
+   - highFreq(10个): 国考真题高频词——擘画、踔厉奋发、行稳致远、新质生产力等常见于历年真题的成语/词组
+   - predictive(5个): 预测冷门词——近期政策新词、可能出现在未来考题中的非高频表述
+2. 每个词包含: word, pinyin, definition, examContext(常考语境), commonMistakes(易错点), category(政治类/经济类/文化类/社会类/生态类)
+3. 10个高频词与申论文段词汇不重复; 5个预测词可有少量交叉
 
-返回纯JSON (不要markdown):
-{{"cards":[
-  {{
-    "correctStatement": "原文中的正确陈述",
-    "wrongOptions": ["错误但看似合理的选项1", "错误选项2", "错误选项3"],
-    "tags": ["考点标签"]
+===== 模块三：申论文段结构化 (1篇) =====
+规则:
+1. vocabulary(3-5个): 文章中的规范政治用语，附原文语境和加分原因
+2. arguments(约3个): 核心论点≤15字 + 展开论述50-80字 + 适用话题
+3. evidence(2-3条): 数据/案例/引言，标注evidenceType
+
+===== 返回格式 (纯JSON，不要markdown) =====
+{{
+  "politicalTheories": [
+    {{
+      "correctStatement": "正确陈述",
+      "wrongOptions": ["干扰项1","干扰项2","干扰项3"],
+      "tags": ["考点标签"]
+    }}
+  ],
+  "dailyWords": [
+    {{"word":"词","pinyin":"","definition":"释义","examContext":"常考语境","commonMistakes":"易错点","category":"政治类","isHighFreq":true}},
+    ...共15个: 10个isHighFreq=true, 5个isHighFreq=false
+  ],
+  "essayPassage": {{
+    "title": "文章标题",
+    "source": "来源",
+    "vocabulary": [{{"word":"词","context":"原文语境","note":"加分原因"}}],
+    "arguments": [{{"point":"论点","elaboration":"展开50-80字","usage":"适用话题"}}],
+    "evidence": [{{"evidenceType":"data|case|quote","content":"...","source":"出处"}}]
   }}
-]}}"""
+}}
+
+请严格遵守10:5比例(10个高频+5个预测=15个词)，确保isHighFreq字段准确"""
 
 
-def essay_prompt(article_text: str, existing_words: List[str]) -> str:
-    words_str = "、".join(existing_words) if existing_words else "无"
-    return f"""你是申论大作文辅导专家。从以下文章提取结构化内容。
-
-文章:
-{article_text[:2500]}
-
-规则:
-1. 词汇积累(3-5个): 提取高分规范政治用语。**必须排除以下词汇(已在选词填空模块出现): {words_str}**
-2. 论点积累(约3个): 核心论点, 每个≤15字, 附带展开论述和适用话题
-3. 论据积累(2-3条): 数据/案例/引言, 标注类型
-
-返回纯JSON:
-{{"vocabulary":[{{"word":"词","context":"原文语境","note":"加分原因"}}],"arguments":[{{"point":"论点","elaboration":"展开50-80字","usage":"适用话题"}}],"evidence":[{{"evidenceType":"data|case|quote","content":"...","source":"出处"}}]}}"""
+def build_unified_prompt(articles: List[dict]) -> str:
+    """拼接多篇文章到一个 prompt"""
+    parts = []
+    for i, art in enumerate(articles[:3]):
+        parts.append(f"[文章{i+1}] 来源:{art.get('source','')} 标题:{art.get('title','')}\n{art.get('content','')[:2000]}")
+    return UNIFIED_PROMPT.replace("{articles}", "\n\n".join(parts))
 
 
 # ============================================================
@@ -188,62 +208,59 @@ def parse_json(text: str) -> dict:
 # ============================================================
 
 def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> dict:
-    """生成一天的内容"""
+    """统一管线: 一次LLM调用产出政治题 + 15词(10:5) + 申论文段"""
     print(f"\n{'='*60}")
     print(f"  [{target_date}] 生成中...")
     print(f"{'='*60}")
 
     # 1. 抓取文章
-    print("[1/3] 抓取文章...")
+    print("[1/2] 抓取文章...")
     articles = fetch_articles()
     print(f"  获取 {len(articles)} 篇文章")
 
-    # 2. 政治理论提取
-    print("[2/3] 政治理论 + 申论结构化...")
-    all_cards = []
-    essay_vocab = set()
-
-    for art in articles[:2]:
-        try:
-            raw = llm.generate(political_prompt(art["content"]), temperature=0.2, max_tokens=1024)
-            data = parse_json(raw)
-            for c in data.get("cards", []):
-                all_cards.append({
-                    "statement": c.get("correctStatement") or c.get("statement", ""),
-                    "wrongOptions": c.get("wrongOptions", []),
-                    "tags": c.get("tags", []),
-                    "source": art["source"],
-                })
-            print(f"  政治卡片: {len(data.get('cards',[]))} 条")
-        except Exception as e:
-            print(f"  [政治提取失败] {e}")
-
-    # 3. 申论文段结构化 (传入已有词汇做去重)
-    main_art = articles[0]
-    political_words = []
-    for c in all_cards:
-        political_words.extend(re.findall(r'[一-鿿]{2,4}', c.get("statement", "")))
-
+    # 2. 统一 LLM 调用
+    print("[2/2] LLM 生成 (政治题 + 15词 + 申论)...")
+    prompt = build_unified_prompt(articles)
     try:
-        raw = llm.generate(essay_prompt(main_art["content"], political_words[:20]), temperature=0.3, max_tokens=1536)
-        essay = parse_json(raw)
-        print(f"  申论: {len(essay.get('vocabulary',[]))}词 {len(essay.get('arguments',[]))}论点 {len(essay.get('evidence',[]))}论据")
+        raw = llm.generate(prompt, temperature=0.3, max_tokens=4096)
+        data = parse_json(raw)
     except Exception as e:
-        print(f"  [申论结构化失败] {e}")
-        essay = {"vocabulary": [], "arguments": [], "evidence": []}
+        print(f"  [LLM失败] {e}")
+        data = {}
 
-    # 4. 去重检查
-    essay_words = {v["word"] for v in essay.get("vocabulary", [])}
-    card_words = set()
-    for c in all_cards:
-        for w in re.findall(r'[一-鿿]{2,}', c.get("statement", "")):
-            card_words.add(w)
-    conflicts = essay_words & card_words
+    # 解析政治理论
+    all_cards = []
+    for c in data.get("politicalTheories", []):
+        all_cards.append({
+            "statement": c.get("correctStatement", ""),
+            "wrongOptions": c.get("wrongOptions", []),
+            "tags": c.get("tags", []),
+        })
+    print(f"  政治题: {len(all_cards)} 道")
+
+    # 解析每日词汇 (10:5)
+    daily_words = data.get("dailyWords", [])
+    high_count = sum(1 for w in daily_words if w.get("isHighFreq"))
+    pred_count = sum(1 for w in daily_words if not w.get("isHighFreq"))
+    print(f"  词汇: {len(daily_words)} 个 (高频{high_count} + 预测{pred_count})")
+    if high_count != 10 or pred_count != 5:
+        print(f"  ⚠ 10:5 比例偏离! 实际 {high_count}:{pred_count}，进行修正...")
+        daily_words = _enforce_ratio(daily_words, 10, 5)
+
+    # 解析申论文段
+    essay = data.get("essayPassage", {})
+    print(f"  申论: {len(essay.get('vocabulary',[]))}词 {len(essay.get('arguments',[]))}论点 {len(essay.get('evidence',[]))}论据")
+
+    # 排他性去重: 申论词汇 vs 选词填空词汇
+    daily_word_set = {w["word"] for w in daily_words}
+    essay_vocab = essay.get("vocabulary", [])
+    conflicts = [v for v in essay_vocab if v.get("word") in daily_word_set]
     if conflicts:
-        print(f"  [去重] 移除 {len(conflicts)} 个重复词: {conflicts}")
-        essay["vocabulary"] = [v for v in essay.get("vocabulary", []) if v["word"] not in card_words]
+        print(f"  [去重] 申论移除 {len(conflicts)} 个重复词: {[c['word'] for c in conflicts]}")
+        essay["vocabulary"] = [v for v in essay_vocab if v["word"] not in daily_word_set]
 
-    # 5. 组装 (选词填空的词库由词库管理器另外维护)
+    # 组装
+    main_art = articles[0] if articles else {"title":"", "source":"", "content":""}
     package = {
         "date": target_date,
         "generatedAt": datetime.now().isoformat(),
@@ -254,24 +271,25 @@ def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> di
                 "questionType": "correct",
                 "question": "以下说法正确的是：",
                 "options": {
-                    "A": c.get("correctStatement", c.get("statement", "")),
-                    "B": c.get("wrongOptions", ["混淆概念的错误表述", "绝对化不当的表述", "与原文相悖的表述"])[0],
-                    "C": c.get("wrongOptions", ["", "", ""])[1] if len(c.get("wrongOptions", [])) > 1 else "与原文无关的表述",
-                    "D": c.get("wrongOptions", ["", "", ""])[2] if len(c.get("wrongOptions", [])) > 2 else "逻辑错误的表述",
+                    "A": c["statement"],
+                    "B": c.get("wrongOptions", ["","",""])[0] or "混淆概念的错误表述",
+                    "C": c.get("wrongOptions", ["","",""])[1] or "与原文相悖的表述",
+                    "D": c.get("wrongOptions", ["","",""])[2] or "逻辑错误的表述",
                 },
                 "correctAnswer": "A",
-                "analysis": f"选项A的陈述准确反映了原文精神。",
+                "analysis": "选项A的陈述准确反映了原文精神。",
                 "tags": c.get("tags", []),
-                "source": c.get("source", main_art["source"]),
+                "source": main_art["source"],
                 "date": target_date,
             }
             for i, c in enumerate(all_cards)
         ],
+        "dailyWords": daily_words,
         "essayPassage": {
             "title": main_art["title"],
             "source": main_art["source"],
             "sourcePublishDate": target_date,
-            "originalExcerpt": main_art["content"][:500],
+            "originalExcerpt": main_art.get("content", "")[:500],
             "sections": [
                 {"type": "vocabulary", "title": "词汇积累", "items": essay.get("vocabulary", [])},
                 {"type": "argument", "title": "论点积累", "items": essay.get("arguments", [])},
@@ -282,14 +300,30 @@ def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> di
         },
     }
 
-    # 保存
     os.makedirs(output_dir, exist_ok=True)
     out_path = os.path.join(output_dir, f"{target_date}.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(package, f, ensure_ascii=False, indent=2)
-
     print(f"  → {out_path}")
     return package
+
+
+def _enforce_ratio(words: list, target_high: int, target_pred: int) -> list:
+    """强制修正10:5比例: 不足则标记预测词为高频, 超出则降级"""
+    high = [w for w in words if w.get("isHighFreq")]
+    pred = [w for w in words if not w.get("isHighFreq")]
+    # 高频不够 → 从预测词中升级
+    while len(high) < target_high and pred:
+        w = pred.pop(0); w["isHighFreq"] = True; high.append(w)
+    # 高频过多 → 降级到预测
+    while len(high) > target_high:
+        w = high.pop(); w["isHighFreq"] = False; pred.insert(0, w)
+    # 预测不够 → 补充
+    while len(pred) < target_pred:
+        pred.append({"word": f"储备词{len(pred)+1}", "isHighFreq": False, "pinyin": "", "definition": "待补充", "examContext": "", "commonMistakes": "", "category": "政治类"})
+    # 预测过多 → 截断
+    pred = pred[:target_pred]
+    return high + pred
 
 
 def batch_generate(start_date: str, days: int, llm: LLM):
