@@ -209,7 +209,8 @@ def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> di
             data = parse_json(raw)
             for c in data.get("cards", []):
                 all_cards.append({
-                    "statement": c["statement"],
+                    "statement": c.get("correctStatement") or c.get("statement", ""),
+                    "wrongOptions": c.get("wrongOptions", []),
                     "tags": c.get("tags", []),
                     "source": art["source"],
                 })
@@ -221,7 +222,7 @@ def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> di
     main_art = articles[0]
     political_words = []
     for c in all_cards:
-        political_words.extend(re.findall(r'[一-鿿]{2,4}', c["statement"]))
+        political_words.extend(re.findall(r'[一-鿿]{2,4}', c.get("statement", "")))
 
     try:
         raw = llm.generate(essay_prompt(main_art["content"], political_words[:20]), temperature=0.3, max_tokens=1536)
@@ -235,7 +236,7 @@ def generate_daily(target_date: str, llm: LLM, output_dir: str = "output") -> di
     essay_words = {v["word"] for v in essay.get("vocabulary", [])}
     card_words = set()
     for c in all_cards:
-        for w in re.findall(r'[一-鿿]{2,}', c["statement"]):
+        for w in re.findall(r'[一-鿿]{2,}', c.get("statement", "")):
             card_words.add(w)
     conflicts = essay_words & card_words
     if conflicts:
