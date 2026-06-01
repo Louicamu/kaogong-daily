@@ -1,0 +1,91 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "考公每日学"
+      }
+    },
+    {
+      "path": "pages/political/index",
+      "style": {
+        "navigationBarTitleText": "政治理论积累",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    },
+    {
+      "path": "pages/words/index",
+      "style": {
+        "navigationBarTitleText": "选词填空积累",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    },
+    {
+      "path": "pages/essay/index",
+      "style": {
+        "navigationBarTitleText": "申论优秀文段",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    },
+    {
+      "path": "pages/favorites/index",
+      "style": {
+        "navigationBarTitleText": "我的收藏",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    },
+    {
+      "path": "pages/calendar/index",
+      "style": {
+        "navigationBarTitleText": "学习日历",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    },
+    {
+      "path": "pages/profile/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    }
+  ],
+  "globalStyle": {
+    "backgroundColor": "#F4F0EA",
+    "backgroundColorTop": "#F4F0EA",
+    "backgroundColorBottom": "#F4F0EA",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "考公每日学",
+    "navigationBarBackgroundColor": "#F4F0EA"
+  },
+  "tabBar": {
+    "color": "#8C8C8C",
+    "selectedColor": "#B22222",
+    "backgroundColor": "#F4F0EA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "今日学习"
+      },
+      {
+        "pagePath": "pages/favorites/index",
+        "text": "收藏"
+      },
+      {
+        "pagePath": "pages/calendar/index",
+        "text": "日历"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^comp-(.*)": "@/components/$1.vue"
+    }
+  }
+}

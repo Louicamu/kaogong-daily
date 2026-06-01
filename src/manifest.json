@@ -1,0 +1,14 @@
+{
+  "name": "考公每日学",
+  "appid": "__UNI__XXXXXX",
+  "description": "公务员考试每日积累小程序",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wxXXXXXXXXXXXXXXXX",
+    "setting": { "es6": true, "minified": true },
+    "usingComponents": true,
+    "optimization": { "subPackages": false }
+  }
+}

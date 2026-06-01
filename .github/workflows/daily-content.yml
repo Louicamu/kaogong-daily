@@ -1,0 +1,60 @@
+name: 🤖 考公每日学 · 自动生成
+
+on:
+  schedule:
+    # 每天北京时间 6:00 (UTC 22:00)
+    - cron: '0 22 * * *'
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '目标日期 (YYYY-MM-DD, 留空=明天)'
+        required: false
+      batch:
+        description: '批量生成天数'
+        default: '0'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r ContentManagement/requirements.txt 2>/dev/null; echo "deps ok"
+
+      - name: Generate daily content
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          cd ContentManagement
+          if [ "${{ github.event.inputs.batch }}" -gt 0 ]; then
+            python auto_pipeline.py --batch ${{ github.event.inputs.batch }}
+          else
+            python auto_pipeline.py --date "${{ github.event.inputs.date }}"
+          fi
+
+      - name: Copy output to frontend
+        run: |
+          mkdir -p src/static/daily
+          cp -r ContentManagement/output/*.json src/static/daily/ || echo "no output yet"
+
+      - name: Commit & Push
+        run: |
+          git config user.name "kaogong-bot"
+          git config user.email "bot@kaogong.daily"
+          git add src/static/daily/ ContentManagement/output/
+          git diff --staged --quiet || (
+            git commit -m "🤖 auto: daily content $(date +%Y-%m-%d)"
+            git push
+          )
