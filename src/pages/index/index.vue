@@ -28,10 +28,15 @@
         <text class="mono text-xs warm-gray">LOADING...</text>
       </view>
 
+      <!-- 显示非今日内容的提示 -->
+      <view v-if="actualDate && actualDate !== todayDate" style="padding:8px 0;text-align:center;">
+        <text class="mono text-2xs warm-gray">显示 {{ actualDate }} 的内容 · 今日尚未更新</text>
+      </view>
+
       <!-- 空 -->
       <view v-else-if="!hasContent" style="padding:60px 0;text-align:center;">
-        <text class="serif text-md ink">今日内容暂未更新</text>
-        <text class="sans text-xs warm-gray" style="display:block;margin-top:8px;">每日 6:00 前更新</text>
+        <text class="serif text-md ink">暂无内容</text>
+        <text class="sans text-xs warm-gray" style="display:block;margin-top:8px;">每日 7:00 前更新</text>
       </view>
 
       <!-- 模块列表 -->
@@ -100,12 +105,27 @@ import SharePoster from '@/components/share-poster.vue'
 const store = useContentStore()
 const streak = useStreakStore()
 const hasContent = ref(true)
+const actualDate = ref('')
 const showConfetti = ref(false)
 const showPoster = ref(false)
-const monthDay = computed(() => { const d = new Date(); return (d.getMonth()+1) + '月' + d.getDate() + '日' })
-const dayOfWeek = computed(() => '星期' + ['日','一','二','三','四','五','六'][new Date().getDay()])
+const todayDate = computed(() => { const d = new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0') })
+const monthDay = computed(() => {
+  const d = actualDate.value ? new Date(actualDate.value) : new Date()
+  return (d.getMonth()+1) + '月' + d.getDate() + '日'
+})
+const dayOfWeek = computed(() => {
+  const d = actualDate.value ? new Date(actualDate.value) : new Date()
+  return '星期' + ['日','一','二','三','四','五','六'][d.getDay()]
+})
 
-onLoad(() => { store.loadDailyContent().then(ok => { hasContent.value = ok }) })
+onLoad(() => {
+  store.loadDailyContent().then(ok => {
+    hasContent.value = ok
+    if (store.modules?.politicalTheory?.actualDate) {
+      actualDate.value = store.modules.politicalTheory.actualDate
+    }
+  })
+})
 onShow(() => { if (!store.loading) store.loadDailyContent() })
 
 // Auto check-in when all 3 modules completed

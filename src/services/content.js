@@ -44,18 +44,42 @@ function setCache(key, data, ttl) {
 }
 
 const api = {
+  /** 智能获取: 今天没有就显示昨天的, 回退最多7天 */
   getDailyContent(date) {
     const d = date || formatToday()
-    const cacheKey = 'daily_' + d
-    const cached = getCache(cacheKey)
-    if (cached) return Promise.resolve(cached)
-    // 1️⃣ 优先: static/daily/{date}.json (GitHub Actions 生成)
-    // 2️⃣ 降级: mock
     return tryStaticDaily(d)
-      .then(res => { if (res) { setCache(cacheKey, res, CACHE_TTL.DAILY_CONTENT); return res } })
-      .catch(() => mockApi.getDailyContent(d))
-      .then(res => { setCache(cacheKey, res, CACHE_TTL.DAILY_CONTENT); return res })
+      .then(res => {
+        if (res) return { ...res, data: { ...res.data, actualDate: d, isToday: d === formatToday() } }
+        throw new Error('not found')
+      })
+      .catch(() => this._fallbackDate(d, 'getDailyContent'))
+      .then(res => {
+        if (res) return res
+        return mockApi.getDailyContent(d)
+      })
   },
+
+  /** 回退查找: 从指定日期往前找, 最多7天 */
+  _fallbackDate(startDate, method) {
+    const d = new Date(startDate)
+    d.setDate(d.getDate() - 1)
+    const prevDate = formatDateObj(d)
+    const maxBack = new Date(startDate); maxBack.setDate(maxBack.getDate() - 7)
+    const cutoff = formatDateObj(maxBack)
+
+    if (prevDate < cutoff) return Promise.resolve(null)
+
+    const cacheKey = method + '_' + prevDate
+    const cached = getCache(cacheKey)
+    if (cached) return Promise.resolve({ ...cached, _fallback: true, _actualDate: prevDate })
+
+    return tryStaticDaily(prevDate)
+      .then(res => {
+        if (res) return { ...res, data: { ...res.data, actualDate: prevDate, isToday: false } }
+        return this._fallbackDate(prevDate, method)
+      })
+  },
+
   getCachedDaily(date) {
     return getCache('daily_' + (date || 'today'))
   },
@@ -66,8 +90,9 @@ const api = {
     if (cached) return Promise.resolve(cached)
     return tryStaticDaily(d)
       .then(json => json?.politicalTheories ? { code: 0, data: { date: d, questions: json.politicalTheories } } : null)
+      .catch(() => this._fallbackDate(d, 'politicalQuestions'))
       .catch(() => mockApi.getPoliticalQuestions(d))
-      .then(res => { setCache(cacheKey, res, CACHE_TTL.POLITICAL); return res })
+      .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.POLITICAL); return res })
   },
   getDailyWordSet(date) {
     const d = date || formatToday()
@@ -76,8 +101,9 @@ const api = {
     if (cached) return Promise.resolve(cached)
     return tryStaticDaily(d)
       .then(json => json?.dailyWords ? { code: 0, data: { date: d, words: json.dailyWords } } : null)
+      .catch(() => this._fallbackDate(d, 'wordSet'))
       .catch(() => mockApi.getDailyWordSet(d))
-      .then(res => { setCache(cacheKey, res, CACHE_TTL.WORD_SET); return res })
+      .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.WORD_SET); return res })
   },
   getEssayPassage(date) {
     const d = date || formatToday()
@@ -86,8 +112,9 @@ const api = {
     if (cached) return Promise.resolve(cached)
     return tryStaticDaily(d)
       .then(json => json?.essayPassage ? { code: 0, data: json.essayPassage } : null)
+      .catch(() => this._fallbackDate(d, 'essayPassage'))
       .catch(() => mockApi.getEssayPassage(d))
-      .then(res => { setCache(cacheKey, res, CACHE_TTL.ESSAY); return res })
+      .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.ESSAY); return res })
   },
   getCalendar(month) {
     return callCloud('getCalendar', 'getCalendar', { month })
@@ -174,6 +201,10 @@ function tryStaticDaily(date) {
 function formatToday() {
   const d = new Date()
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`
+}
+
+function formatDateObj(date) {
+  return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`
 }
 
 export default api
