@@ -1,6 +1,6 @@
 {
   "date": "2026-06-02",
-  "generatedAt": "2026-06-02T23:37:08.370150",
+  "generatedAt": "2026-06-02T23:39:27.472972",
   "engine": "rules",
   "politicalTheories": [
     {
@@ -154,8 +154,8 @@
       "commonMistakes": "踔易误写为卓或焯",
       "category": "政治类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -166,8 +166,8 @@
       "commonMistakes": "'致'不可写作'至'",
       "category": "经济类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -178,8 +178,8 @@
       "commonMistakes": "不可简单等同高科技产业",
       "category": "经济类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -190,8 +190,8 @@
       "commonMistakes": "需理解'正'与'新'的辩证关系",
       "category": "文化类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -201,8 +201,8 @@
       "examContext": "数字经济热词",
       "commonMistakes": "不可滥用",
       "category": "经济类",
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02",
       "isHighFreq": true
     },
@@ -214,8 +214,8 @@
       "commonMistakes": "注意搭配",
       "category": "社会类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -226,8 +226,8 @@
       "commonMistakes": "与'对比'区分",
       "category": "经济类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -238,8 +238,8 @@
       "commonMistakes": "非正式书面语慎用",
       "category": "政治类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
@@ -250,15 +250,15 @@
       "commonMistakes": "搭配注意",
       "category": "政治类",
       "isHighFreq": true,
-      "sourceSentence": "",
-      "sourceArticle": "",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
       "sourceDate": "2026-06-02"
     },
     {
       "word": "人民锐评",
       "pinyin": "",
-      "definition": "出现14次",
-      "examContext": "预测考点",
+      "definition": "文中出现14次",
+      "examContext": "来源于当日文章，预测可能成为考点",
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
@@ -269,8 +269,8 @@
     {
       "word": "负电价",
       "pinyin": "",
-      "definition": "出现9次",
-      "examContext": "预测考点",
+      "definition": "文中出现9次",
+      "examContext": "来源于当日文章，预测可能成为考点",
       "commonMistakes": "",
       "sourceSentence": "在电力现货市场，某些时段甚至会出现“负电价”。",
       "sourceArticle": "人民日报",
@@ -281,8 +281,8 @@
     {
       "word": "违法和不",
       "pinyin": "",
-      "definition": "出现6次",
-      "examContext": "预测考点",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
@@ -293,8 +293,8 @@
     {
       "word": "良信息举",
       "pinyin": "",
-      "definition": "出现6次",
-      "examContext": "预测考点",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
@@ -305,8 +305,8 @@
     {
       "word": "报电话",
       "pinyin": "",
-      "definition": "出现6次",
-      "examContext": "预测考点",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
