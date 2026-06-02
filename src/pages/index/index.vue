@@ -121,9 +121,9 @@ const dayOfWeek = computed(() => {
 onLoad(() => {
   store.loadDailyContent().then(ok => {
     hasContent.value = ok
-    if (store.modules?.politicalTheory?.actualDate) {
-      actualDate.value = store.modules.politicalTheory.actualDate
-    }
+    // Capture actual date from store
+    const contentDate = store._contentDate
+    if (contentDate) actualDate.value = contentDate
   })
 })
 onShow(() => { if (!store.loading) store.loadDailyContent() })

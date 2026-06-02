@@ -43,43 +43,38 @@ function setCache(key, data, ttl) {
   try { uni.setStorageSync(CACHE_PREFIX + key, { data, t: Date.now(), ttl }) } catch (e) { /* ignore */ }
 }
 
+// 寻找最近可用的日期 (今天 → 昨天 → 前天 → ...最多7天)
+async function findBestDate(startDate) {
+  const d = new Date(startDate)
+  for (let i = 0; i < 7; i++) {
+    const ds = formatDateObj(d)
+    try {
+      const res = await tryStaticDaily(ds)
+      if (res) return { date: ds, isToday: ds === formatToday() }
+    } catch (_) {}
+    d.setDate(d.getDate() - 1)
+  }
+  return { date: startDate, isToday: startDate === formatToday() }
+}
+
 const api = {
-  /** 智能获取: 今天没有就显示昨天的, 回退最多7天 */
+  /** 智能获取: 优先 static JSON, 降级 mock */
   getDailyContent(date) {
     const d = date || formatToday()
-    return tryStaticDaily(d)
-      .then(res => {
-        if (res) return { ...res, data: { ...res.data, actualDate: d, isToday: d === formatToday() } }
-        throw new Error('not found')
-      })
-      .catch(() => this._fallbackDate(d, 'getDailyContent'))
-      .then(res => {
-        if (res) return res
-        return mockApi.getDailyContent(d)
-      })
+    return findBestDate(d).then(best => {
+      return tryStaticDaily(best.date)
+        .then(res => {
+          if (res) return { ...res, data: { ...res.data, actualDate: best.date, isToday: best.isToday } }
+          throw new Error('not found')
+        })
+        .catch(() => mockApi.getDailyContent(best.date))
+        .then(res => {
+          res.data.actualDate = best.date
+          res.data.isToday = best.isToday
+          return res
+        })
+    })
   },
-
-  /** 回退查找: 从指定日期往前找, 最多7天 */
-  _fallbackDate(startDate, method) {
-    const d = new Date(startDate)
-    d.setDate(d.getDate() - 1)
-    const prevDate = formatDateObj(d)
-    const maxBack = new Date(startDate); maxBack.setDate(maxBack.getDate() - 7)
-    const cutoff = formatDateObj(maxBack)
-
-    if (prevDate < cutoff) return Promise.resolve(null)
-
-    const cacheKey = method + '_' + prevDate
-    const cached = getCache(cacheKey)
-    if (cached) return Promise.resolve({ ...cached, _fallback: true, _actualDate: prevDate })
-
-    return tryStaticDaily(prevDate)
-      .then(res => {
-        if (res) return { ...res, data: { ...res.data, actualDate: prevDate, isToday: false } }
-        return this._fallbackDate(prevDate, method)
-      })
-  },
-
   getCachedDaily(date) {
     return getCache('daily_' + (date || 'today'))
   },
@@ -88,33 +83,36 @@ const api = {
     const cacheKey = 'political_' + d
     const cached = getCache(cacheKey)
     if (cached) return Promise.resolve(cached)
-    return tryStaticDaily(d)
-      .then(json => json?.politicalTheories ? { code: 0, data: { date: d, questions: json.politicalTheories } } : null)
-      .catch(() => this._fallbackDate(d, 'politicalQuestions'))
-      .catch(() => mockApi.getPoliticalQuestions(d))
-      .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.POLITICAL); return res })
+    return findBestDate(d).then(best => {
+      return tryStaticDaily(best.date)
+        .then(json => json?.politicalTheories ? { code: 0, data: { date: best.date, questions: json.politicalTheories } } : null)
+        .catch(() => mockApi.getPoliticalQuestions(best.date))
+        .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.POLITICAL); return res })
+    })
   },
   getDailyWordSet(date) {
     const d = date || formatToday()
     const cacheKey = 'words_' + d
     const cached = getCache(cacheKey)
     if (cached) return Promise.resolve(cached)
-    return tryStaticDaily(d)
-      .then(json => json?.dailyWords ? { code: 0, data: { date: d, words: json.dailyWords } } : null)
-      .catch(() => this._fallbackDate(d, 'wordSet'))
-      .catch(() => mockApi.getDailyWordSet(d))
-      .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.WORD_SET); return res })
+    return findBestDate(d).then(best => {
+      return tryStaticDaily(best.date)
+        .then(json => json?.dailyWords ? { code: 0, data: { date: best.date, words: json.dailyWords } } : null)
+        .catch(() => mockApi.getDailyWordSet(best.date))
+        .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.WORD_SET); return res })
+    })
   },
   getEssayPassage(date) {
     const d = date || formatToday()
     const cacheKey = 'essay_' + d
     const cached = getCache(cacheKey)
     if (cached) return Promise.resolve(cached)
-    return tryStaticDaily(d)
-      .then(json => json?.essayPassage ? { code: 0, data: json.essayPassage } : null)
-      .catch(() => this._fallbackDate(d, 'essayPassage'))
-      .catch(() => mockApi.getEssayPassage(d))
-      .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.ESSAY); return res })
+    return findBestDate(d).then(best => {
+      return tryStaticDaily(best.date)
+        .then(json => json?.essayPassage ? { code: 0, data: json.essayPassage } : null)
+        .catch(() => mockApi.getEssayPassage(best.date))
+        .then(res => { if (res) setCache(cacheKey, res, CACHE_TTL.ESSAY); return res })
+    })
   },
   getCalendar(month) {
     return callCloud('getCalendar', 'getCalendar', { month })

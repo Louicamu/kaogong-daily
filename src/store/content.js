@@ -15,16 +15,19 @@ export const useContentStore = defineStore('content', () => {
   const completedCount = computed(() => Object.values(progress.value).filter(Boolean).length)
   const progressPercent = computed(() => Math.round((completedCount.value / 3) * 100))
 
-  async function loadDailyContent(date) {
+const _contentDate = ref('')
+
+async function loadDailyContent(date) {
     loading.value = true
     try {
       const res = await contentService.getDailyContent(date || todayDate.value)
-      if (res?.data?.exists) {
+      if (res?.data) {
         const d = res.data
+        _contentDate.value = d.actualDate || d.date || todayDate.value
         modules.value = {
-          politicalTheory: d.modules.politicalTheory || { available: false },
-          wordSet: d.modules.wordSet || { available: false },
-          essayPassage: d.modules.essayPassage || { available: false },
+          politicalTheory: d.modules?.politicalTheory || { available: false },
+          wordSet: d.modules?.wordSet || { available: false },
+          essayPassage: d.modules?.essayPassage || { available: false },
         }
         progress.value = d.userProgress || { politicalTheory: false, wordSet: false, essayPassage: false }
         return true
@@ -43,5 +46,5 @@ export const useContentStore = defineStore('content', () => {
     return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`
   }
 
-  return { todayDate, loading, modules, progress, completedCount, progressPercent, loadDailyContent }
+  return { todayDate, loading, modules, progress, completedCount, progressPercent, loadDailyContent, _contentDate }
 })
