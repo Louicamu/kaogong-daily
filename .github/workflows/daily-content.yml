@@ -31,8 +31,6 @@ jobs:
       # auto_pipeline.py 只用 Python 标准库，无需 pip install
 
       - name: Generate daily content
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           cd ContentManagement
           if [ "${{ github.event.inputs.batch }}" -gt 0 ]; then
