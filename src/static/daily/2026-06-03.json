@@ -1,0 +1,78 @@
+{
+  "date": "2026-06-03",
+  "generatedAt": "2026-06-02T00:18:11.924214",
+  "engine": "deepseek",
+  "politicalTheories": [],
+  "dailyWords": [
+    {
+      "word": "储备词1",
+      "isHighFreq": false,
+      "pinyin": "",
+      "definition": "待补充",
+      "examContext": "",
+      "commonMistakes": "",
+      "category": "政治类"
+    },
+    {
+      "word": "储备词2",
+      "isHighFreq": false,
+      "pinyin": "",
+      "definition": "待补充",
+      "examContext": "",
+      "commonMistakes": "",
+      "category": "政治类"
+    },
+    {
+      "word": "储备词3",
+      "isHighFreq": false,
+      "pinyin": "",
+      "definition": "待补充",
+      "examContext": "",
+      "commonMistakes": "",
+      "category": "政治类"
+    },
+    {
+      "word": "储备词4",
+      "isHighFreq": false,
+      "pinyin": "",
+      "definition": "待补充",
+      "examContext": "",
+      "commonMistakes": "",
+      "category": "政治类"
+    },
+    {
+      "word": "储备词5",
+      "isHighFreq": false,
+      "pinyin": "",
+      "definition": "待补充",
+      "examContext": "",
+      "commonMistakes": "",
+      "category": "政治类"
+    }
+  ],
+  "essayPassage": {
+    "title": "在进一步全面深化改革中推进中国式现代化",
+    "source": "人民日报",
+    "sourcePublishDate": "2026-06-03",
+    "originalExcerpt": "\n        党的二十届三中全会对进一步全面深化改革、推进中国式现代化作出战略部署。\n        中国式现代化是全体人民共同富裕的现代化，是物质文明和精神文明相协调的现代化。\n        发展新质生产力是推动高质量发展的内在要求和重要着力点。\n        改革要以促进社会公平正义、增进人民福祉为出发点和落脚点。\n        2025年我国GDP突破130万亿元，经济实力实现历史性跃升。\n        ",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "title": "词汇积累",
+        "items": []
+      },
+      {
+        "type": "argument",
+        "title": "论点积累",
+        "items": []
+      },
+      {
+        "type": "evidence",
+        "title": "论据积累",
+        "items": []
+      }
+    ],
+    "tags": [],
+    "readingTimeMinutes": 8
+  }
+}
