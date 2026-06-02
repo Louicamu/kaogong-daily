@@ -30,7 +30,7 @@
           <view v-if="sourceSentence" class="block quote">
             <text class="mono text-2xs warm-gray" style="margin-bottom:4px;">原文出处</text>
             <text class="serif text-sm ink" style="font-style:italic;">"{{ sourceSentence }}"</text>
-            <text v-if="sourceArticle" class="mono text-2xs warm-gray" style="display:block;margin-top:4px;">—— {{ sourceArticle }}</text>
+            <text v-if="sourceArticle" class="mono text-2xs warm-gray" style="display:block;margin-top:4px;">—— {{ sourceArticle }} · {{ sourceDate }}</text>
           </view>
           <view v-if="commonMistakes" class="block warn">
             <text class="mono text-2xs" style="color:var(--wrong);margin-bottom:4px;">COMMON MISTAKES</text>
@@ -49,7 +49,7 @@
 import { ref } from 'vue'
 const props = defineProps({
   word: String, wordId: String, pinyin: String, definition: String,
-  examContext: String, sourceSentence: String, sourceArticle: String,
+  examContext: String, sourceSentence: String, sourceArticle: String, sourceDate: String,
   commonMistakes: String, category: String,
   isHighFreq: Boolean, mastered: Boolean, displayOrder: Number,
   dueForReview: Boolean,

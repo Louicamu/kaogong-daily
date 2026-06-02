@@ -145,8 +145,7 @@ UNIFIED_PROMPT = """你是国考备考内容专家。从以下当日新闻文章
   例如: 沙盒监管、全链条、制度型开放、先立后破、微治理
   特征: 使用频率低于高频词，考生容易忽视，但规范性和精准度高
 
-每个词必须包含: word, pinyin, definition(简洁释义), examContext(国考中怎么考), commonMistakes(考生易犯错误), sourceSentence(文章中包含该词的原文句子1-2句), sourceArticle(文章来源如"人民日报评论"), category(政治类/经济类/文化类/社会类/生态类)
-重要: sourceSentence和sourceArticle让用户相信这个词确实来自今天的真实文章，增加可信度
+每个词必须包含: word, pinyin, definition(简洁释义), examContext(国考中怎么考), commonMistakes(考生易犯错误), sourceSentence(文章中包含该词的原文句子), sourceArticle(文章来源如"人民日报评论"), sourceDate(文章日期如"2026-06-02"), category(政治类/经济类/文化类/社会类/生态类)
 重要: 三个模块之间词汇不得重复
 
 ===== 间隔重复复习 =====
@@ -171,7 +170,7 @@ UNIFIED_PROMPT = """你是国考备考内容专家。从以下当日新闻文章
     }}
   ],
   "dailyWords": [
-    {{"word":"擘画","pinyin":"bò huà","definition":"筹划、安排","examContext":"常与'蓝图'搭配, 用于宏观规划类选项","commonMistakes":"易误读为bì, 正确读音bò","sourceSentence":"党的二十届三中全会擘画了进一步全面深化改革的宏伟蓝图。","sourceArticle":"人民日报评论","category":"政治类","isHighFreq":true,"isReview":false}},
+    {{"word":"擘画","pinyin":"bò huà","definition":"筹划、安排","examContext":"常与'蓝图'搭配, 用于宏观规划类选项","commonMistakes":"易误读为bì, 正确读音bò","sourceSentence":"党的二十届三中全会擘画了进一步全面深化改革的宏伟蓝图。","sourceArticle":"人民日报评论","sourceDate":"2026-06-02","category":"政治类","isHighFreq":true,"isReview":false}},
     ...共15个: 10个isHighFreq=true(高频), 5个isHighFreq=false(预测); 其中2-3个词设置isReview=true
   ],
   "essayPassage": {{
