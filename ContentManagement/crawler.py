@@ -150,10 +150,10 @@ def crawl_people_daily() -> List[dict]:
     """人民日报评论版/理论版"""
     articles = []
 
-    # 索引页
+    # 索引页 — 主站评论频道，避免被反爬的旧版URL
     idx_urls = [
-        "http://opinion.people.com.cn/GB/8213/49160/49219/index.html",  # 人民时评
-        "http://theory.people.com.cn/GB/40557/index.html",               # 理论版
+        "http://opinion.people.com.cn/",                    # 评论频道首页
+        "http://politics.people.com.cn/GB/8198/index.html", # 时政频道
     ]
 
     article_links = []
@@ -163,10 +163,10 @@ def crawl_people_daily() -> List[dict]:
         if not html:
             continue
 
-        # 提取文章链接
+        # 提取文章链接 — 宽泛匹配 people.com.cn 域名下的文章页
         links = re.findall(
-            r'<a[^>]*href="(https?://[^"]*people\.com\.cn[^"]*\d{4}-\d{2}/\d{2}[^"]*)"[^>]*>'
-            r'([^<]{15,80})</a>',
+            r'<a[^>]*href="(https?://[^"]*people\.com\.cn[^"]*(?:\d{4}-\d{2}/\d{2}|n1/\d{4}/\d{4})[^"]*)"[^>]*>'
+            r'([^<]{10,100})</a>',
             html
         )
         for url, title in links[:5]:
@@ -174,9 +174,9 @@ def crawl_people_daily() -> List[dict]:
             if title and len(title) >= 10:
                 article_links.append((url, title, "人民日报"))
 
-        # 也匹配相对路径
+        # 匹配相对路径
         rel_links = re.findall(
-            r'<a[^>]*href="(/n1/\d{4}/\d{4}/[^"]*\.html)"[^>]*>([^<]{15,80})</a>',
+            r'<a[^>]*href="(/n1/\d{4}/\d{4}/[^"]*)"[^>]*>([^<]{10,100})</a>',
             html
         )
         for path, title in rel_links[:3]:
@@ -278,15 +278,21 @@ def crawl_china_youth() -> List[dict]:
     """中国青年报 青年话题"""
     articles = []
 
-    idx_url = "http://zqb.cyol.com/html/%04d-%02d/%02d/nbs.D110000zgqnb_01.htm" % (
-        datetime.now().year, datetime.now().month, datetime.now().day
-    )
+    # 尝试多个首页URL
+    idx_urls = [
+        "http://www.cyol.com/",                               # 中青在线
+        "http://zqb.cyol.com/html/%04d-%02d/%02d/nbs.D110000zgqnb_01.htm" % (datetime.now().year, datetime.now().month, datetime.now().day),
+    ]
 
-    html = fetch_url(idx_url, timeout=10)
+    html = None
+    for idx_url in idx_urls:
+        html = fetch_url(idx_url, timeout=10)
+        if html:
+            break
     if not html:
         return articles
 
-    # 提取文章路径
+    # 提取文章路径 (兼容两种URL模式)
     links = re.findall(
         r'<a[^>]*href="(node_[^"]*\.htm)"[^>]*>([^<]{10,60})</a>',
         html
