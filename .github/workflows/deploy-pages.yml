@@ -1,0 +1,57 @@
+name: 🚀 部署到 GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# 权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 防止并发部署
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build H5
+        run: npx uni build -p h5
+
+      - name: Copy content data
+        run: |
+          mkdir -p dist/build/h5/static/daily
+          cp -r src/static/daily/*.json dist/build/h5/static/daily/ 2>/dev/null || echo "no daily JSON yet"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/build/h5
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
