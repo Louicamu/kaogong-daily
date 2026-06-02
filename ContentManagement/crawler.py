@@ -95,9 +95,26 @@ def strip_tags(html: str) -> str:
     return text.strip()
 
 
+def extract_text_brute(html: str) -> str:
+    """暴力提取: 去掉所有标签, 取长文本段"""
+    text = strip_tags(html)
+    # 找连续中文字符最多的段落
+    parts = re.split(r'[\n\r]+', text)
+    long_parts = [p.strip() for p in parts if len(p.strip()) >= 30]
+    return '\n'.join(long_parts[:30])
+
 def extract_paragraphs(html: str, min_len: int = 40) -> List[str]:
     """从 HTML 中提取正文段落"""
-    # 尝试找正文容器
+    # 先尝试特定容器
+    for tag in ['article', 'div', 'section']:
+        m = re.search(rf'<{tag}[^>]*class="[^"]*(?:article|content|text|body|main|TRS_Editor|detail)[^"]*"[^>]*>(.*?)</{tag}>', html, re.DOTALL|re.IGNORECASE)
+        if m:
+            target = m.group(1)
+            paras = re.findall(r'<p[^>]*>(.*?)</p>', target, re.DOTALL)
+            clean = [strip_tags(p).strip() for p in paras if len(strip_tags(p).strip()) >= min_len]
+            if len(clean) >= 2:
+                return clean
+    # 回退: 找正文容器
     body_match = re.search(
         r'(?:<div[^>]*class="[^"]*(?:article|content|text|body|main|TRS_Editor)[^"]*"[^>]*>|'
         r'<article[^>]*>|'
@@ -177,9 +194,11 @@ def crawl_people_daily() -> List[dict]:
                 continue
 
             paras = extract_paragraphs(html, min_len=30)
+            if len(paras) < 2:
+                paras = [extract_text_brute(html)]
             content = "\n".join(paras[:20])  # 前20段
 
-            if len(content) >= 200:
+            if len(content) >= 80:
                 articles.append({
                     "title": title,
                     "content": content[:3000],
@@ -233,9 +252,11 @@ def crawl_xinhua() -> List[dict]:
                 continue
 
             paras = extract_paragraphs(html, min_len=30)
+            if len(paras) < 2:
+                paras = [extract_text_brute(html)]
             content = "\n".join(paras[:20])
 
-            if len(content) >= 200:
+            if len(content) >= 80:
                 articles.append({
                     "title": title,
                     "content": content[:3000],
@@ -285,7 +306,7 @@ def crawl_china_youth() -> List[dict]:
             paras = extract_paragraphs(html2, min_len=30)
             content = "\n".join(paras[:15])
 
-            if len(content) >= 150:
+            if len(content) >= 80:
                 articles.append({
                     "title": strip_tags(title).strip(),
                     "content": content[:2500],
@@ -337,9 +358,11 @@ def crawl_banyuetan() -> List[dict]:
                 continue
 
             paras = extract_paragraphs(html, min_len=30)
+            if len(paras) < 2:
+                paras = [extract_text_brute(html)]
             content = "\n".join(paras[:15])
 
-            if len(content) >= 150:
+            if len(content) >= 80:
                 articles.append({
                     "title": title,
                     "content": content[:2000],
