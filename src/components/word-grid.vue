@@ -14,7 +14,7 @@
         <view class="stripe-high" />
       </view>
       <view class="grid-5x2">
-        <word-card v-for="w in highWords" :key="w.wordId" v-bind="w" :isHighFreq="true" @flip="onFlip" @master="onMaster(w.wordId, $event)" />
+        <word-card v-for="w in highWords" :key="w.wordId" v-bind="w" :isHighFreq="true" :dueForReview="dueWordIds.has(w.wordId)" @flip="onFlip" @master="onMaster(w.wordId, $event)" />
       </view>
     </view>
     <!-- 分割 -->
@@ -30,7 +30,7 @@
         <view class="stripe-pred" />
       </view>
       <view class="grid-5col">
-        <word-card v-for="w in predWords" :key="w.wordId" v-bind="w" :isHighFreq="false" @flip="onFlip" @master="onMaster(w.wordId, $event)" />
+        <word-card v-for="w in predWords" :key="w.wordId" v-bind="w" :isHighFreq="false" :dueForReview="dueWordIds.has(w.wordId)" @flip="onFlip" @master="onMaster(w.wordId, $event)" />
       </view>
     </view>
     <view v-if="masteredCount >= 4" class="encouragement">
@@ -42,15 +42,29 @@
 <script setup>
 import { ref, computed } from 'vue'
 import wordCard from './word-card.vue'
+import { useQuizStore } from '@/store/quiz'
 
 const props = defineProps({ words: Array, date: String })
 const emit = defineEmits(['wordflip', 'masterchange'])
 const flippedCount = ref(0)
 const masterState = ref({})
 
+const quizStore = useQuizStore()
+
 const highWords = computed(() => (props.words || []).filter(w => w.isHighFreq))
 const predWords = computed(() => (props.words || []).filter(w => !w.isHighFreq))
 const masteredCount = computed(() => Object.values(masterState.value).filter(Boolean).length)
+
+// Words due for review: check each word's wordId against the store
+const dueWordIds = computed(() => {
+  const ids = new Set()
+  for (const w of (props.words || [])) {
+    if (w.wordId && quizStore.isWordDue(w.wordId)) {
+      ids.add(w.wordId)
+    }
+  }
+  return ids
+})
 
 function onFlip() { flippedCount.value++ }
 function onMaster(wordId, e) {

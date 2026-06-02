@@ -36,6 +36,13 @@
       }
     },
     {
+      "path": "pages/review/index",
+      "style": {
+        "navigationBarTitleText": "错题回顾",
+        "navigationBarBackgroundColor": "#F4F0EA"
+      }
+    },
+    {
       "path": "pages/calendar/index",
       "style": {
         "navigationBarTitleText": "学习日历",

@@ -4,14 +4,31 @@
       <text class="page-title">我的收藏</text>
       <text class="page-count">{{ favorites.length }} 条</text>
     </view>
+
+    <!-- 搜索栏 -->
+    <search-bar
+      v-model="searchQuery"
+      :results="[]"
+      placeholder="搜索收藏内容..."
+      @search="onSearch"
+    />
+
     <view v-if="loading" class="skeleton-list"><view v-for="i in 3" :key="i" class="sk-item" /></view>
+
     <view v-else-if="!favorites.length" class="empty">
       <text class="empty-icon">♡</text>
       <text class="empty-title">暂无收藏</text>
       <text class="empty-desc">学习时点击收藏按钮，好词好句不错过</text>
     </view>
+
+    <view v-else-if="searchQuery && filteredFavorites.length === 0" class="empty">
+      <text class="empty-icon">🔍</text>
+      <text class="empty-title">收藏中未找到相关内容</text>
+      <text class="empty-desc">试试其他关键词</text>
+    </view>
+
     <view v-else class="fav-list">
-      <view v-for="f in favorites" :key="f._id" class="fav-item" @click="goItem(f)">
+      <view v-for="f in filteredFavorites" :key="f._id" class="fav-item" @click="goItem(f)">
         <view class="fav-type" :class="f.itemType"><text>{{ typeLabel[f.itemType] || '收藏' }}</text></view>
         <view class="fav-content">
           <text class="fav-text">{{ f.title || '无标题' }}</text>
@@ -24,13 +41,26 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
 import contentService from '@/services/content.js'
+import SearchBar from '@/components/search-bar.vue'
 
 const loading = ref(true)
 const favorites = ref([])
+const searchQuery = ref('')
 const typeLabel = { political_theory: '政治', word: '词汇', essay_passage: '申论' }
+
+const filteredFavorites = computed(() => {
+  if (!searchQuery.value) return favorites.value
+  const q = searchQuery.value.toLowerCase()
+  return favorites.value.filter(f => {
+    const title = (f.title || '').toLowerCase()
+    const typeName = (typeLabel[f.itemType] || '').toLowerCase()
+    const date = (f.date || '').toLowerCase()
+    return title.includes(q) || typeName.includes(q) || date.includes(q)
+  })
+})
 
 onShow(() => {
   contentService.getFavorites().then(res => {
@@ -38,6 +68,10 @@ onShow(() => {
     loading.value = false
   })
 })
+
+function onSearch(query) {
+  searchQuery.value = query
+}
 
 function goItem(f) {
   const routes = { political_theory: '/pages/political/index', word: '/pages/words/index', essay_passage: '/pages/essay/index' }

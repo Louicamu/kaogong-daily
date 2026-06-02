@@ -148,6 +148,12 @@ UNIFIED_PROMPT = """你是国考备考内容专家。从以下当日新闻文章
 每个词必须包含: word, pinyin, definition(简洁释义), examContext(国考中怎么考), commonMistakes(考生易犯错误), category(政治类/经济类/文化类/社会类/生态类)
 重要: 三个模块之间词汇不得重复
 
+===== 间隔重复复习 =====
+- 在 dailyWords 中, 纳⼊ 2-3 个国考长期高频词汇作为自然复习 (如"中国式现代化""新质生产力""共同富裕"等)
+- 这些词应与前几日词汇表有重叠, 以帮助考生通过间隔重复加深记忆
+- 标记方式: 在相应词条中添加 "isReview": true 字段
+- 其余 13-14 个词照常生成, 保持 10:5 比例
+
 ===== 模块三：申论文段结构化 (1篇) =====
 规则:
 1. vocabulary(3-5个): 文章中的规范政治用语，附原文语境和加分原因
@@ -164,8 +170,8 @@ UNIFIED_PROMPT = """你是国考备考内容专家。从以下当日新闻文章
     }}
   ],
   "dailyWords": [
-    {{"word":"擘画","pinyin":"bò huà","definition":"筹划、安排","examContext":"常与'蓝图'搭配, 用于宏观规划类选项","commonMistakes":"易误读为bì, 正确读音bò","category":"政治类","isHighFreq":true}},
-    ...共15个: 10个isHighFreq=true(高频: 成语/两字词/三字比喻), 5个isHighFreq=false(预测: 生僻但规范的同类词)
+    {{"word":"擘画","pinyin":"bò huà","definition":"筹划、安排","examContext":"常与'蓝图'搭配, 用于宏观规划类选项","commonMistakes":"易误读为bì, 正确读音bò","category":"政治类","isHighFreq":true,"isReview":false}},
+    ...共15个: 10个isHighFreq=true(高频), 5个isHighFreq=false(预测); 其中2-3个词设置isReview=true
   ],
   "essayPassage": {{
     "title": "文章标题",

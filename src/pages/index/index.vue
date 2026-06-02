@@ -1,8 +1,14 @@
 <template>
   <view class="page">
-    <view class="nav">
+    <view class="nav" style="display:flex;justify-content:space-between;align-items:center;">
       <text class="mono text-2xs accent" style="letter-spacing:0.14em;">KAOGONG DAILY</text>
+      <view style="display:flex;align-items:center;gap:16px;">
+        <streak-badge />
+        <text v-if="store.completedCount === 3" class="nav-share-btn mono text-xs accent" @click.stop="showPoster = true">分享</text>
+      </view>
     </view>
+
+    <view v-if="showConfetti" class="confetti">今日全勤 &#x2728;</view>
 
     <scroll-view class="main" scroll-y enhanced :show-scrollbar="false">
       <view class="date-row">
@@ -75,23 +81,41 @@
         <text class="serif text-sm warm-gray" style="font-style:italic;">合抱之木，生于毫末；九层之台，起于累土。</text>
         <text class="mono text-2xs light-gray" style="display:block;margin-top:6px;">— 道德经</text>
       </view>
+      <text class="mono" style="display:block;text-align:center;font-size:10px;color:var(--text-tertiary);padding-bottom:16px;">内容由 DeepSeek v4-flash 自动生成，仅供学习参考</text>
       <view style="height:env(safe-area-inset-bottom);" />
     </scroll-view>
+
+    <SharePoster v-if="showPoster" @close="showPoster = false" />
   </view>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { onLoad, onShow } from '@dcloudio/uni-app'
 import { useContentStore } from '@/store/content.js'
+import { useStreakStore } from '@/store/streak.js'
+import StreakBadge from '@/components/streak-badge.vue'
+import SharePoster from '@/components/share-poster.vue'
 
 const store = useContentStore()
+const streak = useStreakStore()
 const hasContent = ref(true)
+const showConfetti = ref(false)
+const showPoster = ref(false)
 const monthDay = computed(() => { const d = new Date(); return (d.getMonth()+1) + '月' + d.getDate() + '日' })
 const dayOfWeek = computed(() => '星期' + ['日','一','二','三','四','五','六'][new Date().getDay()])
 
 onLoad(() => { store.loadDailyContent().then(ok => { hasContent.value = ok }) })
 onShow(() => { if (!store.loading) store.loadDailyContent() })
+
+// Auto check-in when all 3 modules completed
+watch(() => store.completedCount, (val) => {
+  if (val === 3 && !streak.checkToday()) {
+    streak.trackStudyDate()
+    showConfetti.value = true
+    setTimeout(() => { showConfetti.value = false }, 3000)
+  }
+})
 
 function goPage(path) { uni.navigateTo({ url: path }) }
 </script>
@@ -116,4 +140,30 @@ function goPage(path) { uni.navigateTo({ url: path }) }
 .word-chip:last-child::after { content: none; }
 
 .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+.nav-share-btn {
+  padding: 4px 12px;
+  border: 1px solid var(--accent-muted);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.nav-share-btn:active { opacity: 0.65; }
+
+.confetti {
+  position: fixed; top: 80px; left: 50%; transform: translateX(-50%);
+  font-family: var(--font-mono); font-size: var(--text-xs);
+  color: var(--accent); background: var(--bg-paper);
+  padding: 6px 16px; border: 1px solid var(--accent-muted);
+  border-radius: 20px;
+  z-index: 200;
+  animation: confettiFade 3s ease forwards;
+  pointer-events: none;
+}
+@keyframes confettiFade {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+  15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  85%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+}
 </style>

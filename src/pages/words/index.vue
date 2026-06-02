@@ -19,7 +19,9 @@ import { ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import contentService from '@/services/content.js'
 import wordGrid from '@/components/word-grid.vue'
+import { useQuizStore } from '@/store/quiz.js'
 
+const quizStore = useQuizStore()
 const loading = ref(true)
 const words = ref([])
 const todayDate = ref('')
@@ -37,7 +39,15 @@ onLoad((options) => {
   })
 })
 
-function onMasterChange(e) { masterState.value[e.wordId] = e.mastered }
+function onMasterChange(e) {
+  masterState.value[e.wordId] = e.mastered
+  const wordObj = words.value.find(w => w.wordId === e.wordId)
+  quizStore.recordWordMastery({
+    wordId: e.wordId,
+    word: wordObj?.word || '',
+    status: e.mastered ? 'mastered' : 'struggling',
+  })
+}
 function saveProgress() {
   contentService.recordProgress(todayDate.value, 'wordSet', { completed: true, masterState: masterState.value })
   saved.value = true

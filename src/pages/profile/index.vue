@@ -21,7 +21,20 @@
         <text class="stat-label">收藏数</text>
       </view>
     </view>
+
+    <!-- 本周学习日历 -->
+    <view class="week-section">
+      <text class="week-section-title mono">本周学习</text>
+      <view class="week-grid">
+        <view v-for="(day, i) in weekDays" :key="i" class="day-cell">
+          <view class="day-circle" :class="{ filled: day.studied }" />
+          <text class="mono day-label">{{ day.label }}</text>
+        </view>
+      </view>
+    </view>
+
     <view class="menu-section">
+      <view class="menu-item" @click="showSharePoster = true"><text>分享今日海报</text><text class="menu-arrow">›</text></view>
       <view class="menu-item" @click="goTab('favorites')"><text>我的收藏</text><text class="menu-arrow">›</text></view>
       <view class="menu-item" @click="goTab('calendar')"><text>学习日历</text><text class="menu-arrow">›</text></view>
       <view class="menu-item"><text>关于考公每日学</text><text class="menu-version">v1.0.0</text></view>
@@ -31,26 +44,37 @@
       <text class="quote-text">"日积月累，功不唐捐"</text>
       <view class="divider-ornament" />
     </view>
+
+    <SharePoster v-if="showSharePoster" @close="showSharePoster = false" />
   </view>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
 import contentService from '@/services/content.js'
+import { useStreakStore } from '@/store/streak.js'
+import SharePoster from '@/components/share-poster.vue'
 
+const streakStore = useStreakStore()
 const stats = ref({ totalStudyDays: 0, streak: 0, totalFavorites: 0 })
+const showSharePoster = ref(false)
+
+const weekDayLabels = ['一', '二', '三', '四', '五', '六', '日']
+const weekDays = computed(() => {
+  const weekDates = streakStore.getWeekDates()
+  return weekDates.map((date, i) => ({
+    date,
+    label: weekDayLabels[i],
+    studied: streakStore.studiedDates.includes(date),
+  }))
+})
 
 onShow(() => {
   contentService.getFavorites().then(res => {
-    let studyDays = 0
-    try {
-      const info = uni.getStorageInfoSync()
-      studyDays = (info.keys || []).filter(k => k.startsWith('kc_progress_')).length
-    } catch (_) {}
     stats.value = {
-      totalStudyDays: studyDays,
-      streak: studyDays,
+      totalStudyDays: streakStore.totalDays,
+      streak: streakStore.currentStreak,
       totalFavorites: res?.data?.total || 0,
     }
   })
@@ -82,4 +106,31 @@ function goTab(page) {
 
 .quote-section { display: flex; flex-direction: column; align-items: center; gap: 16rpx; margin: 64rpx 0; }
 .quote-text { font-family: var(--font-title); font-size: 28rpx; color: var(--text-secondary); font-style: italic; }
+
+.week-section {
+  padding: 24rpx 0; border-bottom: 1rpx solid var(--divider);
+}
+.week-section-title {
+  font-size: 20rpx; color: var(--text-tertiary);
+  letter-spacing: 0.08em; margin-bottom: 16rpx;
+}
+.week-grid {
+  display: flex; justify-content: space-around; align-items: center;
+}
+.day-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 8rpx;
+}
+.day-circle {
+  width: 28rpx; height: 28rpx; border-radius: 50%;
+  border: 2rpx solid var(--divider);
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.day-circle.filled {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.day-label {
+  font-size: 18rpx; color: var(--text-tertiary);
+}
 </style>

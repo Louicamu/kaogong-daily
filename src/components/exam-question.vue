@@ -49,11 +49,13 @@
 
     <view class="hr" style="margin-top:32px;" />
     <text class="sans text-2xs light-gray" style="display:block;margin-top:8px;">{{ source }} · {{ sourcePublishDate }}</text>
+    <disclaimer-badge style="margin-top:8px;" />
   </view>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
+import disclaimerBadge from '@/components/disclaimer-badge.vue'
 const props = defineProps({
   questionId: String, question: String, questionType: { type: String, default: 'correct' },
   options: Object, correctAnswer: String, analysis: String, extendedKnowledge: String,

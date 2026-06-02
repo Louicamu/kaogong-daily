@@ -4,6 +4,7 @@
       <!-- FRONT -->
       <view class="face front">
         <text class="mono freq" :class="isHighFreq ? 'accent' : 'warm-gray'">{{ isHighFreq ? 'HIGH' : 'PRED' }}</text>
+        <text v-if="dueForReview" class="mono review-badge">REVIEW</text>
         <view class="word-block">
           <text class="serif word-main">{{ word }}</text>
           <text v-if="pinyin" class="sans text-2xs warm-gray" style="margin-top:4px;">{{ pinyin }}</text>
@@ -48,6 +49,7 @@ const props = defineProps({
   word: String, wordId: String, pinyin: String, definition: String,
   examContext: String, exampleSentence: String, commonMistakes: String,
   category: String, isHighFreq: Boolean, mastered: Boolean, displayOrder: Number,
+  dueForReview: Boolean,
 })
 const emit = defineEmits(['flip', 'master'])
 const isFlipped = ref(false)
@@ -66,6 +68,7 @@ function toggleMaster() { emit('master', { wordId: props.wordId, mastered: !prop
   background: #FBF9F6; border: 1px solid #E6E2DA; padding: 20px; z-index: 2;
 }
 .freq { position: absolute; top: 12px; left: 12px; font-size: 10px; letter-spacing: 0.12em; }
+.review-badge { position: absolute; top: 12px; right: 12px; font-size: 10px; letter-spacing: 0.12em; color: var(--accent-vermillion, #C1272D); }
 .word-block { display: flex; flex-direction: column; align-items: center; }
 .word-main { font-size: 44px; font-weight: 600; color: #191919; letter-spacing: 0.08em; }
 

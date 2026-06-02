@@ -25,6 +25,7 @@
       </view>
     </view>
     <view v-if="hasContent && !saved" class="save-area"><button class="btn-save" @click="saveProgress">完成今日申论学习</button></view>
+    <disclaimer-badge v-if="hasContent" style="margin-top:24px;text-align:center;" />
   </view>
 </template>
 
@@ -33,6 +34,7 @@ import { ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import contentService from '@/services/content.js'
 import tabSection from '@/components/tab-section.vue'
+import disclaimerBadge from '@/components/disclaimer-badge.vue'
 
 const loading = ref(true)
 const hasContent = ref(false)

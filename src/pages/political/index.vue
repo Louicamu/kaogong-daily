@@ -20,7 +20,9 @@ import { ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import contentService from '@/services/content.js'
 import examQuestion from '@/components/exam-question.vue'
+import { useQuizStore } from '@/store/quiz.js'
 
+const quizStore = useQuizStore()
 const loading = ref(true)
 const questions = ref([])
 const prevAnswers = ref([])
@@ -40,6 +42,31 @@ onLoad((options) => {
 
 function onAnswer(idx, e) {
   contentService.recordProgress(todayDate.value, 'politicalTheory', { questionId: e.questionId, isCorrect: e.isCorrect })
+  const q = questions.value[idx]
+  if (q) {
+    quizStore.recordAnswer({
+      questionId: e.questionId,
+      date: todayDate.value,
+      module: 'politicalTheory',
+      selectedOption: e.selectedOption,
+      correctAnswer: e.correctAnswer,
+      isCorrect: e.isCorrect,
+      questionData: {
+        questionId: q.questionId,
+        question: q.question,
+        questionType: q.questionType,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+        analysis: q.analysis,
+        extendedKnowledge: q.extendedKnowledge,
+        tags: q.tags,
+        examFrequency: q.examFrequency,
+        source: q.source,
+        sourcePublishDate: q.sourcePublishDate,
+        date: q.date,
+      },
+    })
+  }
 }
 function formatDate(d) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}` }
 </script>
