@@ -1,10 +1,10 @@
 {
-  "date": "2026-06-02",
-  "generatedAt": "2026-06-02T23:39:27.472972",
+  "date": "2026-06-04",
+  "generatedAt": "2026-06-03T01:42:28.963491",
   "engine": "rules",
   "politicalTheories": [
     {
-      "questionId": "pt_2026-06-02_00",
+      "questionId": "pt_2026-06-04_00",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -20,10 +20,10 @@
         "绿色发展"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     },
     {
-      "questionId": "pt_2026-06-02_01",
+      "questionId": "pt_2026-06-04_01",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -38,10 +38,10 @@
         "生态文明"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     },
     {
-      "questionId": "pt_2026-06-02_02",
+      "questionId": "pt_2026-06-04_02",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -57,10 +57,10 @@
         "改革开放"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     },
     {
-      "questionId": "pt_2026-06-02_03",
+      "questionId": "pt_2026-06-04_03",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -75,10 +75,10 @@
         "中国式现代化"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     },
     {
-      "questionId": "pt_2026-06-02_04",
+      "questionId": "pt_2026-06-04_04",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -94,10 +94,10 @@
         "高质量发展"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     },
     {
-      "questionId": "pt_2026-06-02_05",
+      "questionId": "pt_2026-06-04_05",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -112,10 +112,10 @@
         "中国式现代化"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     },
     {
-      "questionId": "pt_2026-06-02_06",
+      "questionId": "pt_2026-06-04_06",
       "questionType": "correct",
       "question": "以下说法正确的是：",
       "options": {
@@ -130,7 +130,7 @@
         "中国式现代化"
       ],
       "source": "人民日报",
-      "date": "2026-06-02"
+      "date": "2026-06-04"
     }
   ],
   "dailyWords": [
@@ -143,7 +143,7 @@
       "category": "经济类",
       "sourceSentence": "以数字智慧赋能生态文化建设，有利于推进生态文化的传播推广和转化利用，激发生态文明建设的内生动力，推动经济社会发展全面绿色转型，为加快推进人与自然和谐共生的现代化提供有力科技支撑。",
       "sourceArticle": "人民日报",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "isHighFreq": true
     },
     {
@@ -156,7 +156,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "行稳致远",
@@ -168,7 +168,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "新质生产力",
@@ -180,7 +180,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "守正创新",
@@ -192,7 +192,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "赋能",
@@ -203,7 +203,7 @@
       "category": "经济类",
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "isHighFreq": true
     },
     {
@@ -216,7 +216,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "对标",
@@ -228,7 +228,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "牛鼻子",
@@ -240,7 +240,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "硬骨头",
@@ -252,7 +252,7 @@
       "isHighFreq": true,
       "sourceSentence": "复习词汇，今日文章中未出现",
       "sourceArticle": "考公词库",
-      "sourceDate": "2026-06-02"
+      "sourceDate": "2026-06-03"
     },
     {
       "word": "人民锐评",
@@ -262,7 +262,7 @@
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "category": "综合",
       "isHighFreq": false
     },
@@ -274,7 +274,7 @@
       "commonMistakes": "",
       "sourceSentence": "在电力现货市场，某些时段甚至会出现“负电价”。",
       "sourceArticle": "人民日报",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "category": "综合",
       "isHighFreq": false
     },
@@ -286,7 +286,7 @@
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "category": "综合",
       "isHighFreq": false
     },
@@ -298,7 +298,7 @@
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "category": "综合",
       "isHighFreq": false
     },
@@ -310,7 +310,7 @@
       "commonMistakes": "",
       "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
       "sourceArticle": "人民日报",
-      "sourceDate": "2026-06-02",
+      "sourceDate": "2026-06-03",
       "category": "综合",
       "isHighFreq": false
     }
@@ -318,7 +318,7 @@
   "essayPassage": {
     "title": "维护儿童消费健康生态，不是“六一”专属",
     "source": "人民日报",
-    "sourcePublishDate": "2026-06-02",
+    "sourcePublishDate": "2026-06-03",
     "originalExcerpt": "壹时评：维护儿童消费健康生态，不是“六一”专属--观点--人民网\n2026年05月31日08:42 | 来源： 人民网-观点频道 222\n六一国际儿童节即将来临。近日，中国消费者协会、中国市场监督管理学会结合当前儿童消费领域投诉热点发布消费提示，提醒消费者警惕有关陷阱、理性消费。\n当前，儿童消费市场发展迅速，但也存在鱼龙混杂的情况，套路五花八门，猫腻暗藏其中。\n盲盒、卡牌充斥“概率陷阱”，商家以隐藏款、稀缺卡为噱头诱导未成年人反复抽奖、盲目购买，催生过度消费，呈现“类赌博”倾向，成为消费投诉“重灾区”；“猎奇营销”丧失底线，棒棒糖被做成香烟外形，诱导小学生模仿成年人叼“烟”，潜移默化影响未成年人身心健康；部分儿童智能手表等设备存在泄露隐私、推送不良信息、诱导未成年人沉迷网络等问题，“智能”反而成了不轨勾当的“后门”……凡此种种，涉及儿童消费的陷阱不仅让家长防不胜防、钱包“很受伤”，更可能误导未成年人形成扭曲的消费观念、助长不良习气，对其身心健康与成长成才造成负面影响。\n儿童消费市场不容“野蛮生长”。提醒家长提高自我保护意识，正确培养孩子的消费观，只是一方面；有关部门也当强化事前监管、压实主体责任，让整治措施“长牙齿”，构筑安全放心的儿童消费市场环境。\n聚焦重点领域，治理方能有的放矢。要紧盯产品3C认证、推介营销、预付费等关键环节，对假冒伪劣、价格欺诈、诱导未成年人过度消费等问题，坚决查处并曝光。在监督执法过程中，要严格遵循《消费者权益保护法》《未成年人保护法》等法律法规，形成“查处一案、警示一片、规范一域”的社会效果。用明晰的规则划定经营红线，确保儿童消费市场在正轨上运行。\n针对已经发生的侵权违法行径，要进一步畅通维权渠道。未成年人消费纠纷具有特殊性，需建立更加科学、合理、有效的维权机制，简化举证流程，降低家长维权门槛。针对消费者集体维权等复杂情况，要强化有关部门联动配合，",
     "sections": [
       {
