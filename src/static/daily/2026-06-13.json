@@ -1,0 +1,366 @@
+{
+  "date": "2026-06-13",
+  "generatedAt": "2026-06-12T00:21:46.381709",
+  "engine": "rules",
+  "politicalTheories": [
+    {
+      "questionId": "pt_2026-06-13_00",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化",
+        "改革开放"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    },
+    {
+      "questionId": "pt_2026-06-13_01",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“丰富防治新型腐败和隐性腐败的有效办法。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    },
+    {
+      "questionId": "pt_2026-06-13_02",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "B": "高速增长采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "C": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续停止军队组织形态现代化的战略举措。",
+        "D": "与上述观点相反的表述：高质量发展采取..\n这是深入实施改革强军...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "改革开放",
+        "高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    },
+    {
+      "questionId": "pt_2026-06-13_03",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“建立新污染物协同治理和环境风险管控体系”。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    },
+    {
+      "questionId": "pt_2026-06-13_04",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“加快构建房地产发展新模式。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    },
+    {
+      "questionId": "pt_2026-06-13_05",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展、促进高质量充分就业具有重大意义。",
+        "B": "高速增长、促进高质量充分就业具有重大意义。",
+        "C": "高质量发展、限制高质量充分就业具有重大意义。",
+        "D": "与上述观点相反的表述：高质量发展、促进高质量充分就业具有重大意...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    },
+    {
+      "questionId": "pt_2026-06-13_06",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“构建更有效力的国际传播体系。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-06-13"
+    }
+  ],
+  "dailyWords": [
+    {
+      "word": "擘画",
+      "pinyin": "bò huà",
+      "definition": "筹划、安排，常指宏观规划",
+      "examContext": "常搭配'蓝图'，用于申论大作文宏观论述",
+      "commonMistakes": "易误读为bì，正确读音bò",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "踔厉奋发",
+      "pinyin": "chuō lì fèn fā",
+      "definition": "精神振奋、斗志昂扬",
+      "examContext": "新时代精神状态的标准表述",
+      "commonMistakes": "踔易误写为卓或焯",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "行稳致远",
+      "pinyin": "xíng wěn zhì yuǎn",
+      "definition": "稳步前进才能到达远方",
+      "examContext": "经济政策常用表述",
+      "commonMistakes": "'致'不可写作'至'",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "新质生产力",
+      "pinyin": "xīn zhì shēng chǎn lì",
+      "definition": "以科技创新为主导的先进生产力",
+      "examContext": "经济板块必考概念",
+      "commonMistakes": "不可简单等同高科技产业",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "守正创新",
+      "pinyin": "shǒu zhèng chuàng xīn",
+      "definition": "坚持正道又勇于创新",
+      "examContext": "二十大关键词",
+      "commonMistakes": "需理解'正'与'新'的辩证关系",
+      "category": "文化类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量",
+      "examContext": "数字经济热词",
+      "commonMistakes": "不可滥用",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "闭环",
+      "pinyin": "bì huán",
+      "definition": "管理流程形成完整回路",
+      "examContext": "社会治理常用",
+      "commonMistakes": "注意搭配",
+      "category": "社会类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "对标",
+      "pinyin": "duì biāo",
+      "definition": "对照标准进行比较改进",
+      "examContext": "经济改革常用",
+      "commonMistakes": "与'对比'区分",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "牛鼻子",
+      "pinyin": "niú bí zi",
+      "definition": "比喻事物的关键或主要矛盾",
+      "examContext": "改革话题常用比喻",
+      "commonMistakes": "非正式书面语慎用",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "硬骨头",
+      "pinyin": "yìng gǔ tou",
+      "definition": "比喻艰巨的任务或顽固的问题",
+      "examContext": "改革攻坚常用",
+      "commonMistakes": "搭配注意",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-06-12"
+    },
+    {
+      "word": "人民锐评",
+      "pinyin": "",
+      "definition": "文中出现14次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-06-12",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "负电价",
+      "pinyin": "",
+      "definition": "文中出现9次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "在电力现货市场，某些时段甚至会出现“负电价”。",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-06-12",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "违法和不",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-06-12",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "良信息举",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-06-12",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "报电话",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：铺天盖地的“碳水脸”，彻头彻… 2 人民锐评：遇事就举报老师，陷入“对手思… 3 “破格”与“守规”（人民论坛） 4 为民造福是最大政绩（深入学习贯彻习近… 5 人民锐评：半导体迎来“韬（τ）定律”，… 6 人民锐评：重拳整",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-06-12",
+      "category": "综合",
+      "isHighFreq": false
+    }
+  ],
+  "essayPassage": {
+    "title": "维护儿童消费健康生态，不是“六一”专属",
+    "source": "人民日报",
+    "sourcePublishDate": "2026-06-12",
+    "originalExcerpt": "壹时评：维护儿童消费健康生态，不是“六一”专属--观点--人民网\n2026年05月31日08:42 | 来源： 人民网-观点频道 222\n六一国际儿童节即将来临。近日，中国消费者协会、中国市场监督管理学会结合当前儿童消费领域投诉热点发布消费提示，提醒消费者警惕有关陷阱、理性消费。\n当前，儿童消费市场发展迅速，但也存在鱼龙混杂的情况，套路五花八门，猫腻暗藏其中。\n盲盒、卡牌充斥“概率陷阱”，商家以隐藏款、稀缺卡为噱头诱导未成年人反复抽奖、盲目购买，催生过度消费，呈现“类赌博”倾向，成为消费投诉“重灾区”；“猎奇营销”丧失底线，棒棒糖被做成香烟外形，诱导小学生模仿成年人叼“烟”，潜移默化影响未成年人身心健康；部分儿童智能手表等设备存在泄露隐私、推送不良信息、诱导未成年人沉迷网络等问题，“智能”反而成了不轨勾当的“后门”……凡此种种，涉及儿童消费的陷阱不仅让家长防不胜防、钱包“很受伤”，更可能误导未成年人形成扭曲的消费观念、助长不良习气，对其身心健康与成长成才造成负面影响。\n儿童消费市场不容“野蛮生长”。提醒家长提高自我保护意识，正确培养孩子的消费观，只是一方面；有关部门也当强化事前监管、压实主体责任，让整治措施“长牙齿”，构筑安全放心的儿童消费市场环境。\n聚焦重点领域，治理方能有的放矢。要紧盯产品3C认证、推介营销、预付费等关键环节，对假冒伪劣、价格欺诈、诱导未成年人过度消费等问题，坚决查处并曝光。在监督执法过程中，要严格遵循《消费者权益保护法》《未成年人保护法》等法律法规，形成“查处一案、警示一片、规范一域”的社会效果。用明晰的规则划定经营红线，确保儿童消费市场在正轨上运行。\n针对已经发生的侵权违法行径，要进一步畅通维权渠道。未成年人消费纠纷具有特殊性，需建立更加科学、合理、有效的维权机制，简化举证流程，降低家长维权门槛。针对消费者集体维权等复杂情况，要强化有关部门联动配合，",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "title": "词汇积累",
+        "items": []
+      },
+      {
+        "type": "argument",
+        "title": "论点积累",
+        "items": [
+          {
+            "pointTitle": "坚持侵权必究、违法必惩，是维护市场公平正",
+            "pointContent": "坚持侵权必究、违法必惩，是维护市场公平正义、守护未成年人权益的应有之义。",
+            "usageGuide": "可用于申论论述"
+          },
+          {
+            "pointTitle": "\n维护儿童消费领域健康生态，从来不是“六",
+            "pointContent": "\n维护儿童消费领域健康生态，从来不是“六一”专属，更应是日常坚守。",
+            "usageGuide": "可用于申论论述"
+          },
+          {
+            "pointTitle": "老问题，有关部门都要拿出“标本兼治”的劲",
+            "pointContent": "老问题，有关部门都要拿出“标本兼治”的劲头，为下一代构筑更加健康的成长环境，这也是给孩子们的特殊“礼物”。",
+            "usageGuide": "可用于申论论述"
+          }
+        ]
+      },
+      {
+        "type": "evidence",
+        "title": "论据积累",
+        "items": [
+          {
+            "evidenceType": "data",
+            "content": "2026年05月31日08:42 | 来源： 人民网-观点频道 222\n六一国际儿童节即将来临。",
+            "source": "人民日报"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "时政"
+    ],
+    "readingTimeMinutes": 8
+  }
+}
