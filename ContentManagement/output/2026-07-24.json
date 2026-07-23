@@ -1,0 +1,366 @@
+{
+  "date": "2026-07-24",
+  "generatedAt": "2026-07-23T00:03:16.822482",
+  "engine": "rules",
+  "politicalTheories": [
+    {
+      "questionId": "pt_2026-07-24_00",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化",
+        "改革开放"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    },
+    {
+      "questionId": "pt_2026-07-24_01",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“丰富防治新型腐败和隐性腐败的有效办法。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    },
+    {
+      "questionId": "pt_2026-07-24_02",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "B": "高速增长采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "C": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续停止军队组织形态现代化的战略举措。",
+        "D": "与上述观点相反的表述：高质量发展采取..\n这是深入实施改革强军...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "改革开放",
+        "高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    },
+    {
+      "questionId": "pt_2026-07-24_03",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“建立新污染物协同治理和环境风险管控体系”。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    },
+    {
+      "questionId": "pt_2026-07-24_04",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“加快构建房地产发展新模式。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    },
+    {
+      "questionId": "pt_2026-07-24_05",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展、促进高质量充分就业具有重大意义。",
+        "B": "高速增长、促进高质量充分就业具有重大意义。",
+        "C": "高质量发展、限制高质量充分就业具有重大意义。",
+        "D": "与上述观点相反的表述：高质量发展、促进高质量充分就业具有重大意...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    },
+    {
+      "questionId": "pt_2026-07-24_06",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“构建更有效力的国际传播体系。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-07-24"
+    }
+  ],
+  "dailyWords": [
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量",
+      "examContext": "数字经济热词",
+      "commonMistakes": "不可滥用",
+      "category": "经济类",
+      "sourceSentence": "从制造、医疗到商业服务、文化娱乐，凭借国内完整的制造业结构、丰富的应用场景和城市治理体系，人工智能深度融入各行各业，持续赋能中国经济高质量发展。",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-07-23",
+      "isHighFreq": true
+    },
+    {
+      "word": "踔厉奋发",
+      "pinyin": "chuō lì fèn fā",
+      "definition": "精神振奋、斗志昂扬",
+      "examContext": "新时代精神状态的标准表述",
+      "commonMistakes": "踔易误写为卓或焯",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "行稳致远",
+      "pinyin": "xíng wěn zhì yuǎn",
+      "definition": "稳步前进才能到达远方",
+      "examContext": "经济政策常用表述",
+      "commonMistakes": "'致'不可写作'至'",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "新质生产力",
+      "pinyin": "xīn zhì shēng chǎn lì",
+      "definition": "以科技创新为主导的先进生产力",
+      "examContext": "经济板块必考概念",
+      "commonMistakes": "不可简单等同高科技产业",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "守正创新",
+      "pinyin": "shǒu zhèng chuàng xīn",
+      "definition": "坚持正道又勇于创新",
+      "examContext": "二十大关键词",
+      "commonMistakes": "需理解'正'与'新'的辩证关系",
+      "category": "文化类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量",
+      "examContext": "数字经济热词",
+      "commonMistakes": "不可滥用",
+      "category": "经济类",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23",
+      "isHighFreq": true
+    },
+    {
+      "word": "闭环",
+      "pinyin": "bì huán",
+      "definition": "管理流程形成完整回路",
+      "examContext": "社会治理常用",
+      "commonMistakes": "注意搭配",
+      "category": "社会类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "对标",
+      "pinyin": "duì biāo",
+      "definition": "对照标准进行比较改进",
+      "examContext": "经济改革常用",
+      "commonMistakes": "与'对比'区分",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "牛鼻子",
+      "pinyin": "niú bí zi",
+      "definition": "比喻事物的关键或主要矛盾",
+      "examContext": "改革话题常用比喻",
+      "commonMistakes": "非正式书面语慎用",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "硬骨头",
+      "pinyin": "yìng gǔ tou",
+      "definition": "比喻艰巨的任务或顽固的问题",
+      "examContext": "改革攻坚常用",
+      "commonMistakes": "搭配注意",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-07-23"
+    },
+    {
+      "word": "人民锐评",
+      "pinyin": "",
+      "definition": "文中出现18次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：LV“老花”引争议，我们的文… 2 既有目标意识，也有阶段意识（人民时评… 3 习近平党建思想对马克思主义建党学说的… 4 人民锐评：“民俗恐怖”折射乡土文化传播… 5 人民锐评：志愿服务可以“刷时长”？荒唐！ 6 人民锐评",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-07-23",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "违法和不",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：LV“老花”引争议，我们的文… 2 既有目标意识，也有阶段意识（人民时评… 3 习近平党建思想对马克思主义建党学说的… 4 人民锐评：“民俗恐怖”折射乡土文化传播… 5 人民锐评：志愿服务可以“刷时长”？荒唐！ 6 人民锐评",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-07-23",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "良信息举",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：LV“老花”引争议，我们的文… 2 既有目标意识，也有阶段意识（人民时评… 3 习近平党建思想对马克思主义建党学说的… 4 人民锐评：“民俗恐怖”折射乡土文化传播… 5 人民锐评：志愿服务可以“刷时长”？荒唐！ 6 人民锐评",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-07-23",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "报电话",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：LV“老花”引争议，我们的文… 2 既有目标意识，也有阶段意识（人民时评… 3 习近平党建思想对马克思主义建党学说的… 4 人民锐评：“民俗恐怖”折射乡土文化传播… 5 人民锐评：志愿服务可以“刷时长”？荒唐！ 6 人民锐评",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-07-23",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "举报邮箱",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 人民锐评：LV“老花”引争议，我们的文… 2 既有目标意识，也有阶段意识（人民时评… 3 习近平党建思想对马克思主义建党学说的… 4 人民锐评：“民俗恐怖”折射乡土文化传播… 5 人民锐评：志愿服务可以“刷时长”？荒唐！ 6 人民锐评",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-07-23",
+      "category": "综合",
+      "isHighFreq": false
+    }
+  ],
+  "essayPassage": {
+    "title": "壹时评：普惠智能，中国给世界AI治理的一剂良方",
+    "source": "人民日报",
+    "sourcePublishDate": "2026-07-23",
+    "originalExcerpt": "壹时评：普惠智能，中国给世界AI治理的一剂良方--观点--人民网\n2026年07月16日13:16 | 来源： 人民网-观点频道 222\n这是一场面向未来的盛会。7月17日至20日，2026世界人工智能大会暨人工智能全球治理高级别会议将在上海启幕，习近平主席将出席大会开幕式并发表主旨讲话，全面系统阐述中方对于人工智能发展和治理的政策立场、理念主张。\n近年来，AI技术以前所未有的速度发展和普及。在经济全球化背景中，各经济体的AI战略正在快速扩展。然而，算力资源、先进模型仍集中在少数经济体，全球范围内的数字鸿沟持续拉大。一方面，海量的先进终端、成熟应用不断迭代升级；另一方面，不少国家无力承担智能化转型成本，缺少便捷高效的数字化工具。技术红利分配失衡，已成为全球可持续发展的突出阻碍。\n本届世界人工智能大会以“智能伙伴 共创未来”为主题，传递出鲜明的信号：技术不该成为划分世界的围墙，更不该沦为零和博弈的工具。大会旨在锚定普惠、合作、共享的发展路径，为全球人工智能治理提供新思路。从制造、医疗到商业服务、文化娱乐，凭借国内完整的制造业结构、丰富的应用场景和城市治理体系，人工智能深度融入各行各业，持续赋能中国经济高质量发展。与此同时，中国始终坚持不搞技术封锁、不设排他性壁垒，主动敞开对话窗口，愿意与世界各国分享自己的技术、经验，让人工智能真正服务全人类共同发展。\n这种开放共享的态度，体现在一个个具体鲜活的民生场景中。在防灾减灾领域，中国气象智能预警方案“妈祖”得到世界气象组织（WMO）重点推介，40多个国家气象部门通过云端使用了“妈祖”早期预警业务产品。2024年以来，来自100多个发展中国家和地区的千余人参加了中国气象早期预警技术培训。在公共卫生领域，AI+医疗已全面介入国内医疗产业，推动医疗器械向智能化、家庭化升级。从“产品走出去”到“能力被认可”，中国创新药械企业凭借高质量的创新成",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "title": "词汇积累",
+        "items": []
+      },
+      {
+        "type": "argument",
+        "title": "论点积累",
+        "items": [
+          {
+            "pointTitle": "\n坚持智能向善，健全协同治理体系，是历年",
+            "pointContent": "\n坚持智能向善，健全协同治理体系，是历年世界人工智能大会所倡导的理念之一。",
+            "usageGuide": "可用于申论论述"
+          },
+          {
+            "pointTitle": "以“智能伙伴 共创未来”为主题，既是对A",
+            "pointContent": "以“智能伙伴 共创未来”为主题，既是对AI赋能千行百业的总结，也是对全球治理新格局的展望：互通经验、共享技术，才能让AI的生产力价值充分释放。",
+            "usageGuide": "可用于申论论述"
+          }
+        ]
+      },
+      {
+        "type": "evidence",
+        "title": "论据积累",
+        "items": [
+          {
+            "evidenceType": "data",
+            "content": "2026年07月16日13:16 | 来源： 人民网-观点频道 222\n这是一场面向未来的盛会。",
+            "source": "人民日报"
+          },
+          {
+            "evidenceType": "data",
+            "content": "2024年以来，来自100多个发展中国家和地区的千余人参加了中国气象早期预警技术培训。",
+            "source": "人民日报"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "时政"
+    ],
+    "readingTimeMinutes": 8
+  }
+}
