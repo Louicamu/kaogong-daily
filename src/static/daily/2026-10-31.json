@@ -1,0 +1,361 @@
+{
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-30T02:27:43.534845",
+  "engine": "rules",
+  "politicalTheories": [
+    {
+      "questionId": "pt_2026-10-31_00",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "新质生产力的意见》，明确“以人工智能引领科研范式变革”。",
+        "B": "与上述观点相反的表述：新质生产力的意见》，明确“以人工智能引领...并非必要。",
+        "C": "与上述观点相反的表述：新质生产力的意见》，明确“以人工智能引领...并非必要。",
+        "D": "与上述观点相反的表述：新质生产力的意见》，明确“以人工智能引领...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "新质生产力"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    },
+    {
+      "questionId": "pt_2026-10-31_01",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "新质生产力、构建现代化产业体系提供重要支撑。",
+        "B": "与上述观点相反的表述：新质生产力、构建现代化产业体系提供重要支...并非必要。",
+        "C": "与上述观点相反的表述：新质生产力、构建现代化产业体系提供重要支...并非必要。",
+        "D": "与上述观点相反的表述：新质生产力、构建现代化产业体系提供重要支...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "新质生产力"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    },
+    {
+      "questionId": "pt_2026-10-31_02",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化",
+        "改革开放"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    },
+    {
+      "questionId": "pt_2026-10-31_03",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“丰富防治新型腐败和隐性腐败的有效办法。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    },
+    {
+      "questionId": "pt_2026-10-31_04",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "B": "高速增长采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "C": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续停止军队组织形态现代化的战略举措。",
+        "D": "与上述观点相反的表述：高质量发展采取..\n这是深入实施改革强军...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "改革开放",
+        "高质量发展"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    },
+    {
+      "questionId": "pt_2026-10-31_05",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“建立新污染物协同治理和环境风险管控体系”。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    },
+    {
+      "questionId": "pt_2026-10-31_06",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“加快构建房地产发展新模式。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "人民日报",
+      "date": "2026-10-31"
+    }
+  ],
+  "dailyWords": [
+    {
+      "word": "新质生产力",
+      "pinyin": "xīn zhì shēng chǎn lì",
+      "definition": "以科技创新为主导的先进生产力",
+      "examContext": "经济板块必考概念",
+      "commonMistakes": "不可简单等同高科技产业",
+      "category": "经济类",
+      "sourceSentence": "\n看政策，中共中央、国务院近期印发《关于发展新质生产力的意见》，明确“以人工智能引领科研范式变革”。",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "isHighFreq": true
+    },
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量",
+      "examContext": "数字经济热词",
+      "commonMistakes": "不可滥用",
+      "category": "经济类",
+      "sourceSentence": "这种突出应用导向的发展模式，体现“让人工智能赋能千行百业”。",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "isHighFreq": true
+    },
+    {
+      "word": "行稳致远",
+      "pinyin": "xíng wěn zhì yuǎn",
+      "definition": "稳步前进才能到达远方",
+      "examContext": "经济政策常用表述",
+      "commonMistakes": "'致'不可写作'至'",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30"
+    },
+    {
+      "word": "新质生产力",
+      "pinyin": "xīn zhì shēng chǎn lì",
+      "definition": "以科技创新为主导的先进生产力",
+      "examContext": "经济板块必考概念",
+      "commonMistakes": "不可简单等同高科技产业",
+      "category": "经济类",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30",
+      "isHighFreq": true
+    },
+    {
+      "word": "守正创新",
+      "pinyin": "shǒu zhèng chuàng xīn",
+      "definition": "坚持正道又勇于创新",
+      "examContext": "二十大关键词",
+      "commonMistakes": "需理解'正'与'新'的辩证关系",
+      "category": "文化类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30"
+    },
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量",
+      "examContext": "数字经济热词",
+      "commonMistakes": "不可滥用",
+      "category": "经济类",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30",
+      "isHighFreq": true
+    },
+    {
+      "word": "闭环",
+      "pinyin": "bì huán",
+      "definition": "管理流程形成完整回路",
+      "examContext": "社会治理常用",
+      "commonMistakes": "注意搭配",
+      "category": "社会类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30"
+    },
+    {
+      "word": "对标",
+      "pinyin": "duì biāo",
+      "definition": "对照标准进行比较改进",
+      "examContext": "经济改革常用",
+      "commonMistakes": "与'对比'区分",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30"
+    },
+    {
+      "word": "牛鼻子",
+      "pinyin": "niú bí zi",
+      "definition": "比喻事物的关键或主要矛盾",
+      "examContext": "改革话题常用比喻",
+      "commonMistakes": "非正式书面语慎用",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30"
+    },
+    {
+      "word": "硬骨头",
+      "pinyin": "yìng gǔ tou",
+      "definition": "比喻艰巨的任务或顽固的问题",
+      "examContext": "改革攻坚常用",
+      "commonMistakes": "搭配注意",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-10-30"
+    },
+    {
+      "word": "人民锐评",
+      "pinyin": "",
+      "definition": "文中出现8次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 拆掉技能成才的“成见之山”（人民时评… 2 深刻把握习近平党建思想“十四个坚持”… 3 在新征程上持之以恒推进全面从严治党 4 在新的长征路上奋力创造新的辉煌 5 人民锐评：临床不是秀场，医学容不得“盲… 6 生路与出路（人民论坛） ",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "人工智能",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "2026年10月30日06:06 | 来源： 人民网－人民日报 222\n关于中美人工智能发展，近期网上流传一组对比：中国55%Token（词元）消耗流向AI（人工智能）短剧与视频生成，美国58%消耗在编程、研发、企业自动化，并据此下结论——",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "违法和不",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 拆掉技能成才的“成见之山”（人民时评… 2 深刻把握习近平党建思想“十四个坚持”… 3 在新征程上持之以恒推进全面从严治党 4 在新的长征路上奋力创造新的辉煌 5 人民锐评：临床不是秀场，医学容不得“盲… 6 生路与出路（人民论坛） ",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "良信息举",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 拆掉技能成才的“成见之山”（人民时评… 2 深刻把握习近平党建思想“十四个坚持”… 3 在新征程上持之以恒推进全面从严治党 4 在新的长征路上奋力创造新的辉煌 5 人民锐评：临床不是秀场，医学容不得“盲… 6 生路与出路（人民论坛） ",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "报电话",
+      "pinyin": "",
+      "definition": "文中出现6次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "\n1 拆掉技能成才的“成见之山”（人民时评… 2 深刻把握习近平党建思想“十四个坚持”… 3 在新征程上持之以恒推进全面从严治党 4 在新的长征路上奋力创造新的辉煌 5 人民锐评：临床不是秀场，医学容不得“盲… 6 生路与出路（人民论坛） ",
+      "sourceArticle": "人民日报",
+      "sourceDate": "2026-10-30",
+      "category": "综合",
+      "isHighFreq": false
+    }
+  ],
+  "essayPassage": {
+    "title": "人民锐评：警惕“中国AI跑偏论”",
+    "source": "人民日报",
+    "sourcePublishDate": "2026-10-30",
+    "originalExcerpt": "2026年10月30日06:06 | 来源： 人民网－人民日报 222\n关于中美人工智能发展，近期网上流传一组对比：中国55%Token（词元）消耗流向AI（人工智能）短剧与视频生成，美国58%消耗在编程、研发、企业自动化，并据此下结论——中国再次把“火药”做成了“烟花”，“AI发展跑偏了”。\n且不论数据来源是否可靠权威，忽略总量、口径、样本等差异，做简单机械的数字对比就得出结论，难免武断。\n更何况，词元消耗的流向，虽可一定程度反映市场的“消费流水”，但并非一国AI产业资源投入的“总账”，更不能等同于技术研发方向。\n事实上，文娱产业只是我国AI发展的一个赛道，大量“火药”正用于攻克重大难题的“枪炮”。\n看政策，中共中央、国务院近期印发《关于发展新质生产力的意见》，明确“以人工智能引领科研范式变革”。“十五五”规划纲要提出，“加强人工智能同科技创新、产业发展、文化建设、民生保障、社会治理相结合”。2025年8月，国务院印发的《关于深入实施“人工智能+”行动的意见》，将“‘人工智能+’科学技术”列为第一条重点行动。\n看投入，“算力网”纳入“六张网”，全国首个十万卡级超智融合算力资源池正式上线；布局底座攻关，中国科学院统筹打造“磐石·科学基础大模型2.0”，上海人工智能实验室发布面向重大科学研究突破的“AGI4S珠穆朗玛计划”……\n看成果，AI贯穿“人造太阳”研发全链条，中国空间站用上AI大模型，AI大幅压缩新药临床前研发周期……\n中国AI发展始终锚定国家战略需求和人民美好生活需要，将好钢用在刀刃上，所谓“跑偏论”本身就跑偏了。\n打开视野，中国依托超大规模市场、完整产业体系，让AI走进工厂、农田、医疗、文旅等生产生活场景。这种突出应用导向的发展模式，体现“让人工智能赋能千行百业”。这正是中国优势所在，也是孕育颠覆性创新的土壤。\n从徐州工厂的智能设备10分钟完成产线“变身”，到AI",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "title": "词汇积累",
+        "items": []
+      },
+      {
+        "type": "argument",
+        "title": "论点积累",
+        "items": [
+          {
+            "pointTitle": "\n事实上，文娱产业只是我国AI发展的一个",
+            "pointContent": "\n事实上，文娱产业只是我国AI发展的一个赛道，大量“火药”正用于攻克重大难题的“枪炮”。",
+            "usageGuide": "可用于申论论述"
+          },
+          {
+            "pointTitle": "这正是中国优势所在，也是孕育颠覆性创新的",
+            "pointContent": "这正是中国优势所在，也是孕育颠覆性创新的土壤。",
+            "usageGuide": "可用于申论论述"
+          }
+        ]
+      },
+      {
+        "type": "evidence",
+        "title": "论据积累",
+        "items": [
+          {
+            "evidenceType": "data",
+            "content": "2025年8月，国务院印发的《关于深入实施“人工智能+”行动的意见》，将“‘人工智能+’科学技术”列为第一条重点行动。",
+            "source": "人民日报"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "时政"
+    ],
+    "readingTimeMinutes": 8
+  }
+}
