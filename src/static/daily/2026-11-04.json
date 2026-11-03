@@ -1,0 +1,361 @@
+{
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-03T03:52:47.574966",
+  "engine": "rules",
+  "politicalTheories": [
+    {
+      "questionId": "pt_2026-11-04_00",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“以实绩实效和...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化",
+        "改革开放"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    },
+    {
+      "questionId": "pt_2026-11-04_01",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“丰富防治新型腐败和隐性腐败的有效办法。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“丰富防治新型...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    },
+    {
+      "questionId": "pt_2026-11-04_02",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "B": "高速增长采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续推进军队组织形态现代化的战略举措。",
+        "C": "高质量发展采取..\n这是深入实施改革强军战略、巩固拓展国防和军队改革成果、接续停止军队组织形态现代化的战略举措。",
+        "D": "与上述观点相反的表述：高质量发展采取..\n这是深入实施改革强军...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "改革开放",
+        "高质量发展"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    },
+    {
+      "questionId": "pt_2026-11-04_03",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“建立新污染物协同治理和环境风险管控体系”。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“建立新污染物...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    },
+    {
+      "questionId": "pt_2026-11-04_04",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“加快构建房地产发展新模式。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“加快构建房地...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    },
+    {
+      "questionId": "pt_2026-11-04_05",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "高质量发展、促进高质量充分就业具有重大意义。",
+        "B": "高速增长、促进高质量充分就业具有重大意义。",
+        "C": "高质量发展、限制高质量充分就业具有重大意义。",
+        "D": "与上述观点相反的表述：高质量发展、促进高质量充分就业具有重大意...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "高质量发展"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    },
+    {
+      "questionId": "pt_2026-11-04_06",
+      "questionType": "correct",
+      "question": "以下说法正确的是：",
+      "options": {
+        "A": "中国式现代化的决定》提出：“构建更有效力的国际传播体系。",
+        "B": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。",
+        "C": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。",
+        "D": "与上述观点相反的表述：中国式现代化的决定》提出：“构建更有效力...并非必要。"
+      },
+      "correctAnswer": "A",
+      "analysis": "该陈述来源于原文。",
+      "tags": [
+        "中国式现代化"
+      ],
+      "source": "新华社",
+      "date": "2026-11-04"
+    }
+  ],
+  "dailyWords": [
+    {
+      "word": "踔厉奋发",
+      "pinyin": "chuō lì fèn fā",
+      "definition": "精神振奋、斗志昂扬",
+      "examContext": "新时代精神状态的标准表述",
+      "commonMistakes": "踔易误写为卓或焯",
+      "category": "政治类",
+      "sourceSentence": "\n在以习近平同志为核心的党中央坚强领导下，在习近平新时代中国特色社会主义思想指引下，深入学习贯彻习近平党建思想，全党坚定历史自信，把握历史主动，踔厉奋发、笃行不怠，必将团结带领亿万人民向着实现第二个百年奋斗目标奋勇前行，在新时代新征程上创造",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "isHighFreq": true
+    },
+    {
+      "word": "行稳致远",
+      "pinyin": "xíng wěn zhì yuǎn",
+      "definition": "稳步前进才能到达远方",
+      "examContext": "经济政策常用表述",
+      "commonMistakes": "'致'不可写作'至'",
+      "category": "经济类",
+      "sourceSentence": "文章中包含\"行稳致远\"",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "isHighFreq": true
+    },
+    {
+      "word": "行稳致远",
+      "pinyin": "xíng wěn zhì yuǎn",
+      "definition": "稳步前进才能到达远方",
+      "examContext": "经济政策常用表述",
+      "commonMistakes": "'致'不可写作'至'",
+      "category": "经济类",
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03",
+      "isHighFreq": true
+    },
+    {
+      "word": "新质生产力",
+      "pinyin": "xīn zhì shēng chǎn lì",
+      "definition": "以科技创新为主导的先进生产力",
+      "examContext": "经济板块必考概念",
+      "commonMistakes": "不可简单等同高科技产业",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "守正创新",
+      "pinyin": "shǒu zhèng chuàng xīn",
+      "definition": "坚持正道又勇于创新",
+      "examContext": "二十大关键词",
+      "commonMistakes": "需理解'正'与'新'的辩证关系",
+      "category": "文化类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "赋能",
+      "pinyin": "fù néng",
+      "definition": "赋予能力或能量",
+      "examContext": "数字经济热词",
+      "commonMistakes": "不可滥用",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "闭环",
+      "pinyin": "bì huán",
+      "definition": "管理流程形成完整回路",
+      "examContext": "社会治理常用",
+      "commonMistakes": "注意搭配",
+      "category": "社会类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "对标",
+      "pinyin": "duì biāo",
+      "definition": "对照标准进行比较改进",
+      "examContext": "经济改革常用",
+      "commonMistakes": "与'对比'区分",
+      "category": "经济类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "牛鼻子",
+      "pinyin": "niú bí zi",
+      "definition": "比喻事物的关键或主要矛盾",
+      "examContext": "改革话题常用比喻",
+      "commonMistakes": "非正式书面语慎用",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "硬骨头",
+      "pinyin": "yìng gǔ tou",
+      "definition": "比喻艰巨的任务或顽固的问题",
+      "examContext": "改革攻坚常用",
+      "commonMistakes": "搭配注意",
+      "category": "政治类",
+      "isHighFreq": true,
+      "sourceSentence": "复习词汇，今日文章中未出现",
+      "sourceArticle": "考公词库",
+      "sourceDate": "2026-11-03"
+    },
+    {
+      "word": "中共中央",
+      "pinyin": "",
+      "definition": "文中出现12次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "2024..\n学习《决定》每日问答丨为什么要以实绩实效和人民群众满意度检验改革\n​《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "决定",
+      "pinyin": "",
+      "definition": "文中出现11次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "2024..\n学习《决定》每日问答丨为什么要以实绩实效和人民群众满意度检验改革\n​《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "学习",
+      "pinyin": "",
+      "definition": "文中出现10次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "2024..\n学习《决定》每日问答丨为什么要以实绩实效和人民群众满意度检验改革\n​《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "每日问答",
+      "pinyin": "",
+      "definition": "文中出现10次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "2024..\n学习《决定》每日问答丨为什么要以实绩实效和人民群众满意度检验改革\n​《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "category": "综合",
+      "isHighFreq": false
+    },
+    {
+      "word": "的决定",
+      "pinyin": "",
+      "definition": "文中出现10次",
+      "examContext": "来源于当日文章，预测可能成为考点",
+      "commonMistakes": "",
+      "sourceSentence": "2024..\n学习《决定》每日问答丨为什么要以实绩实效和人民群众满意度检验改革\n​《中共中央关于进一步全面深化改革、推进中国式现代化的决定》提出：“以实绩实效和人民群众满意度检验改革。",
+      "sourceArticle": "新华社",
+      "sourceDate": "2026-11-03",
+      "category": "综合",
+      "isHighFreq": false
+    }
+  ],
+  "essayPassage": {
+    "title": "“狮子山精神”系列思政课丨弘扬爱国奋斗精神 做新时代的忠诚爱国者",
+    "source": "新华社",
+    "sourcePublishDate": "2026-11-03",
+    "originalExcerpt": "“狮子山精神”系列思政课丨弘扬爱国奋斗精神 做新时代的忠诚爱国者-新华网\n“狮子山精神”系列思政课丨弘扬爱国奋斗精神 做新时代的忠诚爱国者\n“狮子山精神”系列思政课丨弘扬爱国奋斗精神 做新时代的忠诚爱国者\n爱国，是人世间最深层、最持久的情感。著名教育家张伯苓于1935年南开大学开学典礼上问了三个问题：“你是中国人吗？你爱中国吗？你愿意中国好吗？”，点燃了师生们的爱国情、报国志。发问声已过八十多年，“爱国三问”犹在耳畔，依旧散发着时代的光芒，蕴藏着无穷的力量。让我们一起聆听南开大学马克思主义学院教授张健的思政课，重温“爱国三问”，弘扬爱国奋斗精神，做新时代的忠诚爱国者。\n010020100020000000000000011198011128796615",
+    "sections": [
+      {
+        "type": "vocabulary",
+        "title": "词汇积累",
+        "items": []
+      },
+      {
+        "type": "argument",
+        "title": "论点积累",
+        "items": [
+          {
+            "pointTitle": "爱国者\n“狮子山精神”系列思政课丨弘扬爱",
+            "pointContent": "爱国者\n“狮子山精神”系列思政课丨弘扬爱国奋斗精神 做新时代的忠诚爱国者\n爱国，是人世间最深层、最持久的情感。",
+            "usageGuide": "可用于申论论述"
+          },
+          {
+            "pointTitle": "著名教育家张伯苓于1935年南开大学开学",
+            "pointContent": "著名教育家张伯苓于1935年南开大学开学典礼上问了三个问题：“你是中国人吗？你爱中国吗？你愿意中国好吗？”，点燃了师生们的爱国情、报国志。",
+            "usageGuide": "可用于申论论述"
+          }
+        ]
+      },
+      {
+        "type": "evidence",
+        "title": "论据积累",
+        "items": [
+          {
+            "evidenceType": "data",
+            "content": "1935年南开大学开学典礼上问了三个问题：“你是中国人吗？你爱中国吗？你愿意中国好吗？”，点燃了师生们的爱国情、报国志。",
+            "source": "新华社"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "时政"
+    ],
+    "readingTimeMinutes": 8
+  }
+}
